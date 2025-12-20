@@ -149,10 +149,17 @@ hide:
 <div class="filter-container">
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">全部</button>
-        <button class="filter-btn" data-filter="主角">主角</button>
-        <button class="filter-btn" data-filter="配角">配角</button>
-        <button class="filter-btn" data-filter="反派">反派</button>
-        <button class="filter-btn" data-filter="npc">NPC</button>
+        <button class="filter-btn" data-filter="Anon">Anon</button>
+        <button class="filter-btn" data-filter="Soyo">Soyo</button>
+        <button class="filter-btn" data-filter="Tomori">Tomori</button>
+        <button class="filter-btn" data-filter="Taki">Taki</button>
+        <button class="filter-btn" data-filter="Rana">Rana</button>
+        <button class="filter-btn" data-filter="Saki">Saki</button>
+        <button class="filter-btn" data-filter="Mutsumi">Mutsumi</button>
+        <button class="filter-btn" data-filter="Uika">Uika</button>
+        <button class="filter-btn" data-filter="Umiri">Umiri</button>
+        <button class="filter-btn" data-filter="Mana">Mana</button>
+        <button class="filter-btn" data-filter="...">...</button>
     </div>
     <input type="text" class="search-box" placeholder="搜索角色名称..." id="characterSearch">
 </div>
@@ -162,89 +169,79 @@ hide:
 
     <!-- 角色1 -->
     <a href="characters/zhangsan" class="character-link">
-        <div class="character-card" data-tags="主角 剑士">
-            <img src="../images/characters/zhangsan.jpg" alt="张三" class="character-image" loading="lazy">
+        <div class="character-card" data-tags="Anon">
+            <img src="D:\AI-Web\Shuixin-xdu.github.io\docs\contents\pictorial_guide\anon_dog.png" alt="Anon犬" class="character-image" loading="lazy">
             <div class="character-info">
-                <h3 class="character-name">张三</h3>
-                <p class="character-description">来自东方的剑术大师，性格沉稳，剑法凌厉。</p>
+                <h3 class="character-name">Anon犬</h3>
+                <p class="character-description">
+                经典款，粉色棉花小狗，喜好水果三明治，会唐笑唐哭，性格(通常)调皮活泼。
+                </p>
                 <div class="character-tags">
-                    <span class="tag">主角</span>
-                    <span class="tag">剑士</span>
+                    <span class="tag">Anon</span>
                 </div>
             </div>
         </div>
     </a>
 
     <!-- 角色2 -->
-    <a href="characters/lisi" class="character-link">
-        <div class="character-card" data-tags="配角 法师">
-            <img src="../images/characters/lisi.jpg" alt="李四" class="character-image" loading="lazy">
+    <a href="characters/zhangsan" class="character-link">
+        <div class="character-card" data-tags="Soyo">
+            <img src="D:\AI-Web\Shuixin-xdu.github.io\docs\contents\pictorial_guide\soyo_fox.png" alt="Soyo狸" class="character-image" loading="lazy">
             <div class="character-info">
-                <h3 class="character-name">李四</h3>
-                <p class="character-description">神秘的魔法师，掌握着古老的咒语。</p>
+                <h3 class="character-name">Soyo狸</h3>
+                <p class="character-description">
+                经典款，亚麻色棉花小狐狸，喜好红茶蛋糕，会唐哭，性格(通常)温顺，较机灵。
+                </p>
                 <div class="character-tags">
-                    <span class="tag">配角</span>
-                    <span class="tag">法师</span>
+                    <span class="tag">Soyo</span>
                 </div>
             </div>
         </div>
     </a>
 
     <!-- 角色3 -->
-    <a href="characters/wangwu" class="character-link">
-        <div class="character-card" data-tags="反派 刺客">
-            <img src="../images/characters/wangwu.jpg" alt="王五" class="character-image" loading="lazy">
+    <a href="characters/zhangsan" class="character-link">
+        <div class="character-card" data-tags="Tomori">
+            <img src="D:\AI-Web\Shuixin-xdu.github.io\docs\contents\pictorial_guide\tomori_penguin.png" alt="Tomori企鹅" class="character-image" loading="lazy">
             <div class="character-info">
-                <h3 class="character-name">王五</h3>
-                <p class="character-description">影子中的刺客，行动诡秘，出手狠辣。</p>
+                <h3 class="character-name">Tomori企鹅</h3>
+                <p class="character-description">
+                经典款，呆萌呆萌的棉花小企鹅?(存疑)，喜欢收集，会咕咕嘎嘎。
+                </p>
                 <div class="character-tags">
-                    <span class="tag">反派</span>
-                    <span class="tag">刺客</span>
+                    <span class="tag">Tomori</span>
                 </div>
             </div>
         </div>
     </a>
 
     <!-- 角色4 -->
-    <a href="characters/zhaoliu" class="character-link">
-        <div class="character-card" data-tags="npc 商人">
-            <img src="../images/characters/zhaoliu.jpg" alt="赵六" class="character-image" loading="lazy">
+    <a href="characters/zhangsan" class="character-link">
+        <div class="character-card" data-tags="Taki">
+            <img src="D:\AI-Web\Shuixin-xdu.github.io\docs\contents\pictorial_guide\taki_wolf.png" alt="Taki狼" class="character-image" loading="lazy">
             <div class="character-info">
-                <h3 class="character-name">赵六</h3>
-                <p class="character-description">旅行商人，售卖各种稀有物品。</p>
+                <h3 class="character-name">Taki狼</h3>
+                <p class="character-description">
+                经典款，黑棕棉花小狼，喜欢熊猫和Tomori企鹅(?)，喂食Rana猫？哈？
+                </p>
                 <div class="character-tags">
-                    <span class="tag">NPC</span>
-                    <span class="tag">商人</span>
+                    <span class="tag">Taki</span>
                 </div>
             </div>
         </div>
     </a>
 
     <!-- 角色5 -->
-    <a href="characters/qianqi" class="character-link">
-        <div class="character-card" data-tags="主角 射手">
-            <img src="../images/characters/qianqi.jpg" alt="钱七" class="character-image" loading="lazy">
+    <a href="characters/zhangsan" class="character-link">
+        <div class="character-card" data-tags="Rana">
+            <img src="D:\AI-Web\Shuixin-xdu.github.io\docs\contents\pictorial_guide\rana_cat.png" alt="Rana猫" class="character-image" loading="lazy">
             <div class="character-info">
-                <h3 class="character-name">钱七</h3>
-                <p class="character-description">神射手，百发百中，眼神锐利如鹰。</p>
+                <h3 class="character-name">Rana猫</h3>
+                <p class="character-description">
+                经典款，银白色棉花异瞳小猫，喜欢吃抹茶味的食物，调皮灵动，喜欢恶作剧。
+                </p>
                 <div class="character-tags">
-                    <span class="tag">主角</span>
-                    <span class="tag">射手</span>
-                </div>
-            </div>
-        </div>
-    </a>
-
-    <!-- 角色6 -->
-    <a href="characters/sunba" class="character-link">
-        <div class="character-card" data-tags="配角 治疗">
-            <img src="../images/characters/sunba.jpg" alt="孙八" class="character-image" loading="lazy">
-            <div class="character-info">
-                <h3 class="character-name">孙八</h3>
-                <p class="character-description">善良的治疗师，精通草药学。</p>
-                <div class="character-tags">
-                    <span class="tag">配角</span>
-                    <span class="tag">治疗</span>
+                    <span class="tag">Rana</span>
                 </div>
             </div>
         </div>
@@ -278,6 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 更新筛选器
             currentFilter = this.dataset.filter;
+            console.log('当前筛选:', currentFilter); // 调试用
             filterCharacters();
         });
     });
@@ -288,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
         filterCharacters();
     });
     
-    // 筛选函数
+    // 修复后的筛选函数
     function filterCharacters() {
         let visibleCount = 0;
         
@@ -296,11 +294,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const tags = card.dataset.tags.toLowerCase();
             const name = card.querySelector('.character-name').textContent.toLowerCase();
             
-            // 检查筛选条件
-            const matchesFilter = currentFilter === 'all' || tags.includes(currentFilter);
+            // 修复这里：将 currentFilter 也转为小写
+            const filterLower = currentFilter.toLowerCase();
+            const matchesFilter = currentFilter === 'all' || 
+                tags.includes(filterLower);
+            
             const matchesSearch = currentSearch === '' || 
                 name.includes(currentSearch) || 
                 tags.includes(currentSearch);
+            
+            // 调试信息（可选）
+            // console.log('卡片:', name, '标签:', tags, '匹配筛选:', matchesFilter);
             
             // 显示/隐藏卡片
             if (matchesFilter && matchesSearch) {
