@@ -156,7 +156,6 @@ hide:
         <button class="filter-btn" data-filter="Mutsumi">Mutsumi</button>
         <button class="filter-btn" data-filter="Uika">Uika</button>
         <button class="filter-btn" data-filter="Umiri">Umiri</button>
-        <button class="filter-btn" data-filter="Mana">Mana</button>
         <button class="filter-btn" data-filter="...">...</button>
     </div>
     <input type="text" class="search-box" placeholder="搜索角色名称..." id="characterSearch">
@@ -320,6 +319,22 @@ hide:
                 </p>
                 <div class="character-tags">
                     <span class="tag">Saki</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- 角色11 -->
+    <a href="characters/zhangsan" class="character-link">
+        <div class="character-card" data-tags="Soyo">
+            <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/temsora.png" alt="天素罗" class="character-image" loading="lazy">
+            <div class="character-info">
+                <h3 class="character-name">天素罗</h3>
+                <p class="character-description">
+                经典款，天妇罗炸虾状的棉花小生物，
+                </p>
+                <div class="character-tags">
+                    <span class="tag">Soyo</span>
                 </div>
             </div>
         </div>

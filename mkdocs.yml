@@ -46,6 +46,11 @@ markdown_extensions:
 nav:
   - 首页: index.md
   - 角色图鉴: contents/characters.md
+  - 素材图库: contents/assets/assets.md
+  - 爱向视频: contents/part_gentle/gentle_videos.md
+  - 虐向视频: contents/part_violent/violent_videos.md
+  - 一般/剧情向视频: contents/part_normal/normal_videos.md
+  - 猎奇专区: contents/part_bizaree/bizarre.md
 
 # 页脚
 extra:
