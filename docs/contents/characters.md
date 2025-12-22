@@ -181,7 +181,7 @@ hide:
     </a>
 
     <!-- 角色2 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/soyo_fox" class="character-link">
         <div class="character-card" data-tags="Soyo">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/soyo_fox.png" alt="Soyo狸" class="character-image" loading="lazy">
             <div class="character-info">
@@ -197,7 +197,7 @@ hide:
     </a>
 
     <!-- 角色3 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/tomori_penguin" class="character-link">
         <div class="character-card" data-tags="Tomori">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/tomori_penguin.png" alt="Tomori企鹅" class="character-image" loading="lazy">
             <div class="character-info">
@@ -213,7 +213,7 @@ hide:
     </a>
 
     <!-- 角色4 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/taki_wolf" class="character-link">
         <div class="character-card" data-tags="Taki">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/taki_wolf.png" alt="Taki狼" class="character-image" loading="lazy">
             <div class="character-info">
@@ -229,7 +229,7 @@ hide:
     </a>
 
     <!-- 角色5 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/rana_cat" class="character-link">
         <div class="character-card" data-tags="Rana">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/rana_cat.png" alt="Rana猫" class="character-image" loading="lazy">
             <div class="character-info">
@@ -245,7 +245,7 @@ hide:
     </a>
 
     <!-- 角色6 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/umiri_wolf" class="character-link">
         <div class="character-card" data-tags="Umiri">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/umiri_wolf.png" alt="Umiri狼" class="character-image" loading="lazy">
             <div class="character-info">
@@ -261,7 +261,7 @@ hide:
     </a>
 
     <!-- 角色7 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/uika_dog" class="character-link">
         <div class="character-card" data-tags="Uika">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/uika_dog.png" alt="Uika犬" class="character-image" loading="lazy">
             <div class="character-info">
@@ -277,7 +277,7 @@ hide:
     </a>
 
     <!-- 角色8 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/mutsumi_rabbit" class="character-link">
         <div class="character-card" data-tags="Mutsumi">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/mutsumi_rabbit.png" alt="Mutsumi兔" class="character-image" loading="lazy">
             <div class="character-info">
@@ -293,7 +293,7 @@ hide:
     </a>
 
     <!-- 角色9 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/nyamu_cat" class="character-link">
         <div class="character-card" data-tags="Nyamu">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/nyamu_cat.png" alt="Nyamu猫" class="character-image" loading="lazy">
             <div class="character-info">
@@ -309,7 +309,7 @@ hide:
     </a>
 
     <!-- 角色10 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/saki_cat" class="character-link">
         <div class="character-card" data-tags="Saki">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/saki_cat.png" alt="Saki猫" class="character-image" loading="lazy">
             <div class="character-info">
@@ -325,7 +325,7 @@ hide:
     </a>
 
     <!-- 角色11 -->
-    <a href="characters/zhangsan" class="character-link">
+    <a href="../characters/soyo_temsora" class="character-link">
         <div class="character-card" data-tags="Soyo">
             <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/soyo_temsora.png" alt="天素罗" class="character-image" loading="lazy">
             <div class="character-info">

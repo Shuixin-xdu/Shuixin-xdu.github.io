@@ -45,17 +45,38 @@ markdown_extensions:
 # 导航
 nav:
   - 首页: index.md
+# <----------------------------------------------->
   - 角色图鉴: 
     - 图鉴: contents/characters.md
     - Anon犬: contents/characters/anon_dog.md
+    - Soyo狸: contents/characters/soyo_fox.md
+    - Tomori企鹅: contents/characters/tomori_penguin.md
+    - Taki狼: contents/characters/taki_wolf.md
+    - Rana猫: contents/characters/rana_cat.md
+    - Umiri狼: contents/characters/umiri_wolf.md
+    - Uika犬: contents/characters/uika_dog.md
+    - Mutsumi兔: contents/characters/mutsumi_rabbit.md
+    - Nyamu猫: contents/characters/nyamu_cat.md
+    - Saki猫: contents/characters/saki_cat.md
+    - 天素罗: contents/characters/soyo_temsora.md
+# <----------------------------------------------->
   - 素材图库: contents/assets/assets.md
-  - 爱向视频: contents/part_gentle/gentle_videos.md
-  - 虐向视频: contents/part_violent/violent_videos.md
+# <----------------------------------------------->
+  - 爱向视频: 
+    - 爱向: contents/part_gentle/gentle_videos.md
+    - gv0: contents/part_gentle/videos/gv0/gv0.md
+# <----------------------------------------------->
+  - 虐向视频: 
+    - 虐向: contents/part_violent/violent_videos.md
+    - vv0: contents/part_violent/videos/vv0/vv0.md
+# <----------------------------------------------->
   - 一般/剧情向视频: 
     - 一般向: contents/part_normal/normal_videos.md
     - nv0: contents/part_normal/videos/nv0/nv0.md
-  - 猎奇专区: contents/part_bizaree/bizarre.md
-
+# <----------------------------------------------->
+  - 猎奇专区: 
+    - 猎奇向: contents/part_bizarre/bizarre.md
+    - bv0: contents/part_bizarre/videos/bv0/bv0.md
 # 页脚
 extra:
   generator: false  # 隐藏"Powered by MkDocs"

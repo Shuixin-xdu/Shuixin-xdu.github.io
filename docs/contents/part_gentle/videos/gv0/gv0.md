@@ -1,6 +1,6 @@
 ---
-title: '[测试]小anon们一只犬在外面一定要小心'
-description: '[测试]小anon们一只犬在外面一定要小心'
+title: '[测试]雨后小故事'
+description: '[测试]雨后小故事'
 layout: video
 hide:
   - navigation  
@@ -187,7 +187,7 @@ hide:
     <div class="video-container aspect-16-9" id="videoContainer">
         <!-- 使用外部视频播放器 -->
         <iframe 
-            src="https://player.vimeo.com/video/1148370982?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            src="//player.bilibili.com/player.html?isOutside=true&aid=115329216814837&bvid=BV1ZTxmzVEGh&cid=32886817736&p=1" 
             frameborder="0" 
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 

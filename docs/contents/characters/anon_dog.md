@@ -8,7 +8,7 @@ hide:
 
 <!-- 返回按钮 -->
 <div style="margin-bottom: 20px;">
-    <a href="../角色图鉴" style="display: inline-flex; align-items: center; text-decoration: none; color: var(--md-primary-fg-color);">
+    <a href="../../characters" style="display: inline-flex; align-items: center; text-decoration: none; color: var(--md-primary-fg-color);">
         <svg style="width: 20px; height: 20px; margin-right: 8px;" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
         </svg>
@@ -29,13 +29,13 @@ hide:
         <!-- 缩略图图集 -->
         <div class="thumbnail-gallery">
             <div class="thumbnail active" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/anon_dog.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/anon_dog.png" alt="正面照">
+                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/anon_dog.png" alt="主图">
             </div>
             <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/anon_dog/pic1.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/anon_dog/pic1.png" alt="侧面照">
+                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/anon_dog/pic1.png" alt="子图1">
             </div>
             <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/anon_dog/pic2.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/anon_dog/pic2.png" alt="背面照">
+                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/anon_dog/pic2.png" alt="子图2">
             </div>
         </div>
     </div>

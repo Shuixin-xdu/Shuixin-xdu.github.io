@@ -1,6 +1,6 @@
 ---
-title: '[测试]小anon们一只犬在外面一定要小心'
-description: '[测试]小anon们一只犬在外面一定要小心'
+title: '[测试]【阿脓犬】垃圾场大冒险（坏结局）'
+description: '[测试]【阿脓犬】垃圾场大冒险（坏结局）'
 layout: video
 hide:
   - navigation  
@@ -187,7 +187,7 @@ hide:
     <div class="video-container aspect-16-9" id="videoContainer">
         <!-- 使用外部视频播放器 -->
         <iframe 
-            src="https://player.vimeo.com/video/1148370982?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+            src="https://www.youtube.com/embed/aE16AloLKjA?si=JWLxle4QRjZVOUL6" 
             frameborder="0" 
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
