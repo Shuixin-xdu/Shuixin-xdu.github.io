@@ -20,7 +20,7 @@ hide:
     <!-- 左侧图片区域 -->
     <div class="character-detail-image">
         <div class="main-image">
-            <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/Tomori企鹅.png" 
+            <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin.png" 
                  alt="Tomori企鹅 主图" 
                  id="mainCharacterImage"
                  loading="eager">
@@ -28,14 +28,14 @@ hide:
         
         <!-- 缩略图图集 -->
         <div class="thumbnail-gallery">
-            <div class="thumbnail active" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/Tomori企鹅.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/Tomori企鹅.png" alt="主图">
+            <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin.png">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin.png" alt="主图">
             </div>
-            <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/Tomori企鹅/pic1.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/Tomori企鹅/pic1.png" alt="子图1">
+            <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin/pic1.png">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin/pic1.png" alt="子图1">
             </div>
-            <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/Tomori企鹅/pic2.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/Tomori企鹅/pic2.png" alt="子图2">
+            <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin/pic2.png">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin/pic2.png" alt="子图2">
             </div>
         </div>
     </div>
@@ -61,26 +61,29 @@ hide:
                 </tr>
                 <tr>
                     <th>毛色</th>
-                    <td>黑白外毛皮，发色为灰？紫？有争议</td>
+                    <td>黑白外毛皮，发色为灰？紫？难说</td>
                 </tr>
                 <tr>
                     <th>首次发现</th>
-                    <td>首次发现于南极，但是后来也有部分个体不知为何出现在羽丘女子学院的周边，伪装成了石头被路人坐下歇脚...</td>
+                    <td>2025年x月x日</td>
                 </tr>
                 <tr>
                     <th>常见出没地</th>
-                    <td>路边的草丛中，动物园，街上，南极</td>
+                    <td>路边的草丛中，街上，南极</td>
                 </tr>
                 <tr>
-                    <th>关联角色</th>
+                    <th>主要关联角色</th>
                     <td>
-                        <a href="../其它角色名1" class="character-link-small">其它角色名1</a>
-                        <a href="../其它角色名2" class="character-link-small">其它角色名2</a>
+                        <a href="../anon_dog" class="character-link-small">Anon犬</a>
+                        <a href="../soyo_fox" class="character-link-small">Soyo狸</a>
+                        <a href="../rana_cat" class="character-link-small">Saki猫</a>
+                        <a href="../taki_wolf" class="character-link-small">Taki狼</a>
+                        <a href="../mutsumi_rabbit" class="character-link-small">Mutsumi兔</a>
                     </td>
                 </tr>
                 <tr>
                     <th>危险等级</th>
-                    <td><span class="danger-level medium">★☆☆☆☆</span></td>
+                    <td><span class="danger-level medium">★★★☆☆</span></td>
                 </tr>
             </table>
         </div>
@@ -88,7 +91,7 @@ hide:
         <!-- 快速描述 -->
         <div class="quick-description">
             <h3>简介</h3>
-            <p>棉花小企鹅，是MyGO!!!!!乐队的主唱......吗？部分个体安静可爱内向温柔，但是也有部分个体疑似精神有问题(<del>不要抢它们的石头<\del>)，会咕咕嘎嘎地叫。</p>
+            <p>棉花小企鹅，是MyGO!!!!!乐队的主唱......吗？部分个体安静可爱内向温柔，但是也有部分个体疑似精神有问题(<del>不要抢它们的石头</del>)，会咕咕嘎嘎地叫。</p>
         </div>
         
         <!-- 特性指标 -->
@@ -105,9 +108,9 @@ hide:
                 <div class="stat-item">
                     <div class="stat-label">情绪波动</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 70%;"></div>
+                        <div class="stat-fill" style="width: 60%;"></div>
                     </div>
-                    <div class="stat-value">7/10</div>
+                    <div class="stat-value">6/10</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-label">破坏力</div>
@@ -129,25 +132,25 @@ hide:
         <div class="section-content">
             <h3>饮食偏好</h3>
             <ul>
-                <li><strong>最爱食物：</strong>xx</li>
-                <li><strong>常饮饮品：</strong>xx</li>
-                <li><strong>特殊习惯：</strong>xx</li>
+                <li><strong>最爱食物：</strong>像花和星星的小糖果</li>
+                <li><strong>常饮饮品：</strong>难说</li>
+                <li><strong>特殊习惯：</strong>不像anon犬那样吃饭也不消停，通常还是正常进食的，少部分时候...看到熟食会宕机咕嘎大叫跑走。</li>
             </ul>
             
             <h3>行为模式</h3>
             <div class="behavior-patterns">
                 <div class="pattern-card">
-                    <div class="pattern-icon">emoji或图标1</div>
+                    <div class="pattern-icon">🩹</div>
                     <div class="pattern-content">
-                        <h4>xx模式</h4>
-                        <p>请输入文本</p>
+                        <h4>收集癖</h4>
+                        <p>哪怕变成企鹅也要收集石头和创口贴吗，哈基灯你这家伙...</p>
                     </div>
                 </div>
                 <div class="pattern-card">
-                    <div class="pattern-icon">emoji或图标2</div>
+                    <div class="pattern-icon">🐧</div>
                     <div class="pattern-content">
-                        <h4>xx模式</h4>
-                        <p>请输入文本</p>
+                        <h4>咕咕嘎嘎</h4>
+                        <p>点击输入咕嘎</p>
                     </div>
                 </div>
             </div>
@@ -158,14 +161,14 @@ hide:
     <section class="detail-section">
         <h2>背景故事</h2>
         <div class="section-content">
-            <p>Tomori企鹅 最初被发现于？，请输入文本</p>
+            <p>Tomori企鹅首次被发现于南极，科考员最初看背影以为是普通的企鹅，直到它一手拿着绿色笔记本一手拿着石头好奇地转身。</p>
             
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">2025年3月</div>
                     <div class="timeline-content">
                         <h4>初次发现</h4>
-                        <p>请输入文本</p>
+                        <p>首次被发现于南极，但是后来也有部分个体不知为何出现在羽丘女子学院的周边，伪装成了石头被路人坐下歇脚...</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -184,25 +187,25 @@ hide:
         <h2>角色关系</h2>
         <div class="section-content">
             <div class="relationship-grid">
-                <a href="../mutsumi_rabbit" class="relationship-card">
+                <a href="../anon_dog" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/其它角色1.png" alt="其它角色1">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" alt="Anon犬">
                     </div>
                     <div class="rel-info">
-                        <h4>其他角色1</h4>
-                        <p class="rel-type">关系</p>
-                        <p class="rel-desc">请输入文本</p>
+                        <h4>Anon犬</h4>
+                        <p class="rel-type">重要朋友</p>
+                        <p class="rel-desc">它们经常一起行动，但是Tomori企鹅的动作笨拙，常常显得Anon犬有多动症。</p>
                     </div>
                 </a>
                 
-                <a href="../anon_dog" class="relationship-card">
+                <a href="../saki_cat" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/其它角色2.png" alt="其它角色2">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/saki_cat.png" alt="Saki猫">
                     </div>
                     <div class="rel-info">
-                        <h4>其它角色2</h4>
-                        <p class="rel-type">关系</p>
-                        <p class="rel-desc">请输入文本</p>
+                        <h4>Saki猫</h4>
+                        <p class="rel-type">重要朋友</p>
+                        <p class="rel-desc">Tomori企鹅似乎总是在它的笔记本上写写画画，偶遇到Saki猫时总会想上前给它看。</p>
                     </div>
                 </a>
             </div>
@@ -215,8 +218,8 @@ hide:
         <div class="section-content">
             <div class="anecdotes">
                 <div class="anecdote">
-                    <h4>请输入标题</h4>
-                    <p>请输入文本</p>
+                    <h4>🪨 爆装备</h4>
+                    <p>Tomori企鹅走路笨拙，被不怀好意的人类埋伏绊倒，结果爆了一地石头...</p>
                 </div>
                 <div class="anecdote">
                     <h4>请输入标题</h4>

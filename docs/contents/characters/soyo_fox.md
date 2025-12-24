@@ -19,26 +19,46 @@ hide:
 <div class="character-detail-container">
     <!-- 左侧图片区域 -->
     <div class="character-detail-image">
-        <div class="main-image">
-            <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" 
-                 alt="Soyo狸 主图" 
-                 id="mainCharacterImage"
-                 loading="eager">
+        <div class="fixed-image-section">
+            <div class="main-image" onclick="openImageModal('main', this)">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" 
+                     alt="Soyo狸 主图" 
+                     id="mainCharacterImage"
+                     loading="eager">
+            </div>
+
+            <!-- 缩略图图集 -->
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" alt="主图">
+                </div>
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic1.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic1.png" alt="子图1">
+                </div>
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic2.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic2.png" alt="子图2">
+                </div>
+            </div>
         </div>
-        
-        <!-- 缩略图图集 -->
-        <div class="thumbnail-gallery">
-            <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png">
-                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" alt="主图">
+
+        <!-- 固定图集卡片 -->
+        <div class="gallery-card">
+            <div class="gallery-nav" id="galleryPrev">
+                <span>&lt;</span>
             </div>
-            <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic1.png">
-                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic1.png" alt="子图1">
+            <div class="gallery-image-container" onclick="openImageModal('gallery', this)">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_1.png" 
+                     alt="图集图片" 
+                     id="galleryImage"
+                     class="gallery-image">
+                <div class="gallery-signature" id="gallerySignature">其它形象1(待认领署名)</div>
             </div>
-            <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic2.png">
-                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/pic2.png" alt="子图2">
+            <div class="gallery-nav" id="galleryNext">
+                <span>&gt;</span>
             </div>
         </div>
     </div>
+
     
     <!-- 右侧信息区域 -->
     <div class="character-detail-info">
@@ -72,17 +92,19 @@ hide:
                     <td>人类居所内、草原、地洞</td>
                 </tr>
                 <tr>
-                    <th>关联角色</th>
+                    <th>主要关联角色</th>
                     <td>
                         <a href="../anon_dog" class="character-link-small">Anon犬</a>
                         <a href="../tomori_penguin" class="character-link-small">Tomori企鹅</a>
+                        <a href="../rana_cat" class="character-link-small">Saki猫</a>
                         <a href="../taki_wolf" class="character-link-small">Taki狼</a>
                         <a href="../rana_cat" class="character-link-small">Rana猫</a>
+                        <a href="../mutsumi_rabbit" class="character-link-small">Mutsumi兔</a>
                     </td>
                 </tr>
                 <tr>
                     <th>危险等级</th>
-                    <td><span class="danger-level low">★★☆☆☆</span></td>
+                    <td><span class="danger-level medium">★★★☆☆</span></td>
                 </tr>
             </table>
         </div>
@@ -141,21 +163,21 @@ hide:
                 <div class="pattern-card">
                     <div class="pattern-icon">😢</div>
                     <div class="pattern-content">
-                        <h4>情感模式</h4>
+                        <h4>情绪敏感</h4>
                         <p>当触及内心敏感话题<del>或被人类欺负</del>时会委屈地抽泣，但会尽量整理<del>遗</del>仪容，不让脆弱持续太久。</p>
                     </div>
                 </div>
                 <div class="pattern-card">
                     <div class="pattern-icon">🎭</div>
                     <div class="pattern-content">
-                        <h4>伪装/防御模式</h4>
+                        <h4>伪装/防御毛球</h4>
                         <p>用缩成毛球的方式对待陌生角色或有威胁的对象，只有在极信任的对象面前才会卸下伪装。</p>
                     </div>
                 </div>
                 <div class="pattern-card">
                     <div class="pattern-icon">🎸</div>
                     <div class="pattern-content">
-                        <h4>音乐模式</h4>
+                        <h4>音乐</h4>
                         <p>弹奏贝斯时全神贯注，动作流畅优美，低音旋律中常透露出复杂的情感。</p>
                     </div>
                 </div>
@@ -195,7 +217,7 @@ hide:
             <div class="relationship-grid">
                 <a href="../mutsumi_rabbit" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/mutsumi_rabbit.png" alt="Mutsumi兔">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/mutsumi_rabbit.png" alt="Mutsumi兔">
                     </div>
                     <div class="rel-info">
                         <h4>Mutsumi兔</h4>
@@ -206,11 +228,11 @@ hide:
                 
                 <a href="../anon_dog" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/anon_dog.png" alt="Anon犬">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" alt="Anon犬">
                     </div>
                     <div class="rel-info">
                         <h4>Anon犬</h4>
-                        <p class="rel-type">乐队伙伴 / 玩伴</p>
+                        <p class="rel-type">玩伴 / 情感依赖</p>
                         <p class="rel-desc">Soyo狸表面上有些嫌弃甚至讨厌anon犬吵闹与破坏，但是喜欢抱着anon犬睡觉，无论是家养还是野生，它们经常一起行动。</p>
                     </div>
                 </a>
@@ -236,6 +258,20 @@ hide:
     </section>
 </div>
 
+<!-- 图片放大模态框 -->
+<div id="imageModal" class="image-modal">
+    <div class="modal-overlay" onclick="closeImageModal()"></div>
+    <div class="modal-content">
+        <button class="close-button" onclick="closeImageModal()">×</button>
+        <div class="modal-nav" onclick="changeImage(-1)">&lt;</div>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="放大图片">
+            <div class="modal-signature" id="modalSignature"></div>
+        </div>
+        <div class="modal-nav" onclick="changeImage(1)">&gt;</div>
+    </div>
+</div>
+
 <style>
 /* 详情页面样式 */
 .character-detail-container {
@@ -253,9 +289,14 @@ hide:
 
 /* 图片区域 */
 .character-detail-image {
-    position: sticky;
     top: 20px;
     align-self: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-image-section {
+    top: 20px;
 }
 
 .main-image {
@@ -263,6 +304,12 @@ hide:
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.02);
 }
 
 .main-image img {
@@ -275,6 +322,7 @@ hide:
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .thumbnail {
@@ -300,6 +348,66 @@ hide:
     width: 100%;
     height: 80px;
     object-fit: cover;
+}
+
+/* 固定图集卡片 */
+.gallery-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--md-default-bg-color);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.gallery-nav {
+    width: 30px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(64, 158, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.gallery-nav:hover {
+    background: rgba(64, 158, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.gallery-image-container {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image-container:hover {
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* 署名样式 */
+.gallery-signature {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light);
 }
 
 /* 信息区域 */
@@ -748,6 +856,32 @@ hide:
     margin-right: 10px;
 }
 
+/* 关闭按钮样式 */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; /* 确保在模态框内容之上 */
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     .character-title {
@@ -775,6 +909,94 @@ hide:
     .next-character {
         text-align: left;
     }
+    
+    .gallery-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gallery-nav {
+        width: 180px;
+        height: 30px;
+        align-self: center;
+    }
+}
+
+/* 图片放大模态框样式 */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+}
+
+.modal-nav {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.modal-image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    padding: 0 20px;
+}
+
+.modal-image-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-signature {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
+    max-width: 100%;
 }
 </style>
 
@@ -794,6 +1016,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 更新主图
             const newImage = this.getAttribute('data-image');
+            const newSignature = this.getAttribute('data-signature');
             if (newImage && newImage !== mainImage.src) {
                 // 添加淡出效果
                 mainImage.style.opacity = '0.5';
@@ -821,5 +1044,122 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // 图集切换功能
+    const galleryImage = document.getElementById('galleryImage');
+    const gallerySignature = document.getElementById('gallerySignature');
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    
+    // 图集图片数组（这里使用示例图片，实际应用中可以动态加载）
+    const galleryImages = [
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_1.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_2.png", signature: "其它形象2(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_3.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_4.png", signature: "其它形象2(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_5.png", signature: "其它形象2(待署名)"}
+    ];
+    
+    let currentGalleryIndex = 0;
+    
+    function updateGalleryImage() {
+        galleryImage.style.opacity = '0.5'; // 淡出效果
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = '1'; // 加载完成后再淡入
+        };
+        galleryImage.onerror = () => {
+            galleryImage.src = 'https://via.placeholder.com/300x300.png'; // 加载失败时的占位图
+            galleryImage.style.opacity = '1';
+        };
+        galleryImage.src = galleryImages[currentGalleryIndex].src; // 更新图片
+        gallerySignature.textContent = galleryImages[currentGalleryIndex].signature; // 更新署名
+    }
+    
+    galleryPrev.addEventListener('click', function() {
+        currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateGalleryImage();
+    });
+    
+    galleryNext.addEventListener('click', function() {
+        currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+        updateGalleryImage();
+    });
 });
+
+// 图片放大模态框功能
+let currentModalType = null;
+let currentModalIndex = 0;
+let modalImageSources = [];
+let modalSignatures = [];
+
+function openImageModal(type, element) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalSignature = document.getElementById('modalSignature');
+    
+    if (type === 'main') {
+        // 主图模式：获取所有缩略图数据
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        modalImageSources = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-image'));
+        modalSignatures = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-signature'));
+        // 找到当前缩略图的索引
+        const currentSrc = document.getElementById('mainCharacterImage').src;
+        currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
+        if (currentModalIndex === -1) currentModalIndex = 0;
+    } else if (type === 'gallery') {
+        // 图集模式：使用图集数据
+        modalImageSources = galleryImages.map(img => img.src);
+        modalSignatures = galleryImages.map(img => img.signature);
+        // 找到当前图集图片的索引
+        const currentSrc = document.getElementById('galleryImage').src;
+        currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
+        if (currentModalIndex === -1) currentModalIndex = 0;
+    }
+    
+    currentModalType = type;
+    modalImage.src = modalImageSources[currentModalIndex];
+    modalSignature.textContent = modalSignatures[currentModalIndex];
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 防止背景滚动
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // 恢复背景滚动
+}
+
+function changeImage(direction) {
+    if (currentModalType === null) return;
+    
+    currentModalIndex += direction;
+    
+    // 循环切换
+    if (currentModalIndex >= modalImageSources.length) {
+        currentModalIndex = 0;
+    } else if (currentModalIndex < 0) {
+        currentModalIndex = modalImageSources.length - 1;
+    }
+    
+    const modalImage = document.getElementById('modalImage');
+    const modalSignature = document.getElementById('modalSignature');
+    modalImage.src = modalImageSources[currentModalIndex];
+    modalSignature.textContent = modalSignatures[currentModalIndex];
+}
+
+// 点击ESC键关闭模态框
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+});
+
+// 图集数据（在全局作用域定义，供模态框使用）
+const galleryImages = [
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_1.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_2.png", signature: "其它形象2(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_3.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_4.png", signature: "其它形象2(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_5.png", signature: "其它形象2(待署名)"}
+];
 </script>

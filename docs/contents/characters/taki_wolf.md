@@ -1,5 +1,5 @@
 ---
-title: 角色名 详细资料
+title: Anon犬 详细资料
 layout: default
 hide:
   - navigation
@@ -19,36 +19,56 @@ hide:
 <div class="character-detail-container">
     <!-- 左侧图片区域 -->
     <div class="character-detail-image">
-        <div class="main-image">
-            <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/角色名.png" 
-                 alt="角色名 主图" 
-                 id="mainCharacterImage"
-                 loading="eager">
+        <div class="fixed-image-section">
+            <div class="main-image" onclick="openImageModal('main', this)">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" 
+                     alt="Anon犬 主图" 
+                     id="mainCharacterImage"
+                     loading="eager">
+            </div>
+
+            <!-- 缩略图图集 -->
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" alt="主图">
+                </div>
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic1.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic1.png" alt="子图1">
+                </div>
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic2.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic2.png" alt="子图2">
+                </div>
+            </div>
         </div>
-        
-        <!-- 缩略图图集 -->
-        <div class="thumbnail-gallery">
-            <div class="thumbnail active" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/soyo_fox.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/角色名.png" alt="主图">
+
+        <!-- 固定图集卡片 -->
+        <div class="gallery-card">
+            <div class="gallery-nav" id="galleryPrev">
+                <span>&lt;</span>
             </div>
-            <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/soyo_fox/pic1.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/角色名/pic1.png" alt="子图1">
+            <div class="gallery-image-container" onclick="openImageModal('gallery', this)">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_1.png" 
+                     alt="图集图片" 
+                     id="galleryImage"
+                     class="gallery-image">
+                <div class="gallery-signature" id="gallerySignature">其它形象1(待认领署名)</div>
             </div>
-            <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/soyo_fox/pic2.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/角色名/pic2.png" alt="子图2">
+            <div class="gallery-nav" id="galleryNext">
+                <span>&gt;</span>
             </div>
         </div>
     </div>
+
     
     <!-- 右侧信息区域 -->
     <div class="character-detail-info">
         <div class="character-header">
-            <h1 class="character-title">角色名</h1>
+            <h1 class="character-title">Anon犬</h1>
             <div class="character-tags">
-                <span class="tag primary">xx系</span>
-                <span class="tag secondary">x科</span>
+                <span class="tag primary">Anon系</span>
+                <span class="tag secondary">犬科</span>
                 <span class="tag accent">棉花生物</span>
-                <span class="tag">xx型</span>
+                <span class="tag">活泼型</span>
             </div>
         </div>
         
@@ -57,30 +77,33 @@ hide:
             <table>
                 <tr>
                     <th>物种类型</th>
-                    <td>棉花x型生物</td>
+                    <td>棉花犬型生物</td>
                 </tr>
                 <tr>
                     <th>毛色</th>
-                    <td>xxx</td>
+                    <td>粉色系渐变</td>
                 </tr>
                 <tr>
                     <th>首次发现</th>
-                    <td>xxx</td>
+                    <td>2025年X月X日</td>
                 </tr>
                 <tr>
                     <th>常见出没地</th>
-                    <td>xxx</td>
+                    <td>人类居所内、草地、面包店、街边、<del>垃圾场</del></td>
                 </tr>
                 <tr>
-                    <th>关联角色</th>
+                    <th>主要关联角色</th>
                     <td>
-                        <a href="../其它角色名1" class="character-link-small">其它角色名1</a>
-                        <a href="../其它角色名2" class="character-link-small">其它角色名2</a>
+                        <a href="../tomori_penguin" class="character-link-small">Tomori企鹅</a>
+                        <a href="../soyo_fox" class="character-link-small">Soyo狸</a>
+                        <a href="../taki_wolf" class="character-link-small">Taki狼</a>
+                        <a href="../rana_cat" class="character-link-small">Rana猫</a>
+                        <a href="../saki_cat" class="character-link-small">Saki猫</a>
                     </td>
                 </tr>
                 <tr>
                     <th>危险等级</th>
-                    <td><span class="danger-level medium">★★★☆☆</span></td>
+                    <td><span class="danger-level extreme">★★★★★</span></td>
                 </tr>
             </table>
         </div>
@@ -88,7 +111,7 @@ hide:
         <!-- 快速描述 -->
         <div class="quick-description">
             <h3>简介</h3>
-            <p>请输入文本</p>
+            <p>粉色棉花小狗，是MyGO!!!!!乐队的吉他手<del>兼主唱</del>......吗？情绪变化丰富，笑声与哭声洗脑，对水果三明治有特殊偏好。</p>
         </div>
         
         <!-- 特性指标 -->
@@ -98,23 +121,23 @@ hide:
                 <div class="stat-item">
                     <div class="stat-label">活泼度</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 0%;"></div>
+                        <div class="stat-fill" style="width: 90%;"></div>
                     </div>
-                    <div class="stat-value">?/10</div>
+                    <div class="stat-value">9/10</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-label">情绪波动</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 0%;"></div>
+                        <div class="stat-fill" style="width: 90%;"></div>
                     </div>
-                    <div class="stat-value">?/10</div>
+                    <div class="stat-value">9/10</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-label">破坏力</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 0%;"></div>
+                        <div class="stat-fill" style="width: 100%;"></div>
                     </div>
-                    <div class="stat-value">?/10</div>
+                    <div class="stat-value">10/10</div>
                 </div>
             </div>
         </div>
@@ -129,25 +152,39 @@ hide:
         <div class="section-content">
             <h3>饮食偏好</h3>
             <ul>
-                <li><strong>最爱食物：</strong>xx</li>
-                <li><strong>常饮饮品：</strong>xx</li>
-                <li><strong>特殊习惯：</strong>xx</li>
+                <li><strong>最爱食物：</strong>水果三明治</li>
+                <li><strong>常饮饮品：</strong>果汁果茶类饮料</li>
+                <li><strong>特殊习惯：</strong>进食时会发出唐笑声</li>
             </ul>
             
             <h3>行为模式</h3>
             <div class="behavior-patterns">
                 <div class="pattern-card">
-                    <div class="pattern-icon">emoji或图标1</div>
+                    <div class="pattern-icon">😄</div>
                     <div class="pattern-content">
-                        <h4>xx模式</h4>
-                        <p>请输入文本</p>
+                        <h4>唐笑</h4>
+                        <p>当遇到开心事或吃到喜欢的水果三明治时，会突然发出响亮笑声，耳朵和尾巴乖巧地摆动。</p>
                     </div>
                 </div>
                 <div class="pattern-card">
-                    <div class="pattern-icon">emoji或图标2</div>
+                    <div class="pattern-icon">😭</div>
                     <div class="pattern-content">
-                        <h4>xx模式</h4>
-                        <p>请输入文本</p>
+                        <h4>唐哭</h4>
+                        <p>情绪敏感，容易因<del>被人类欺负或虐██</del>各种原因突然哭泣。</p>
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-icon">🏠️</div>
+                    <div class="pattern-content">
+                        <h4>拆家</h4>
+                        <p>一部分anon犬，它们被收养后自动触发破坏被动。</p>
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-icon">🎸</div>
+                    <div class="pattern-content">
+                        <h4>音乐</h4>
+                        <p>手持吉他时进入专注状态，音乐表现力强。</p>
                     </div>
                 </div>
             </div>
@@ -158,14 +195,14 @@ hide:
     <section class="detail-section">
         <h2>背景故事</h2>
         <div class="section-content">
-            <p>角色名 最初被发现于？，请输入文本</p>
+            <p>Anon犬最初被发现于羽丘女子学园周边，因其独特的粉色棉花质地和情绪快速切换能力而引起研究者的关注。</p>
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2025年3月</div>
+                    <div class="timeline-date">2025年春</div>
                     <div class="timeline-content">
                         <h4>初次发现</h4>
-                        <p>请输入文本</p>
+                        <p>在羽丘女子学园附近的咖啡馆被首次目击，当时正在偷吃顾客的水果三明治。</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -184,25 +221,36 @@ hide:
         <h2>角色关系</h2>
         <div class="section-content">
             <div class="relationship-grid">
-                <a href="../mutsumi_rabbit" class="relationship-card">
+                <a href="../tomori_penguin" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/其它角色1.png" alt="其它角色1">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin.png" alt="Tomori企鹅">
                     </div>
                     <div class="rel-info">
-                        <h4>其他角色1</h4>
-                        <p class="rel-type">关系</p>
-                        <p class="rel-desc">请输入文本</p>
+                        <h4>Tomori企鹅</h4>
+                        <p class="rel-type">重要朋友</p>
+                        <p class="rel-desc">经常一起行动，Anon犬总是会好奇地观察Tomori企鹅。</p>
                     </div>
                 </a>
                 
-                <a href="../anon_dog" class="relationship-card">
+                <a href="../soyo_fox" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/其它角色2.png" alt="其它角色2">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" alt="Soyo狸">
                     </div>
                     <div class="rel-info">
-                        <h4>其它角色2</h4>
+                        <h4>Soyo狸</h4>
+                        <p class="rel-type">玩伴 / 情感依赖</p>
+                        <p class="rel-desc">Anon犬经常找Soyo狸玩耍，并且号称只是因为它们都是犬科所以好交流。</p>
+                    </div>
+                </a>
+
+                <a href="../角色名.md" class="relationship-card">
+                    <div class="rel-avatar">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/角色名.png" alt="角色名">
+                    </div>
+                    <div class="rel-info">
+                        <h4>角色名</h4>
                         <p class="rel-type">关系</p>
-                        <p class="rel-desc">请输入文本</p>
+                        <p class="rel-desc">请输入文本（描述）</p>
                     </div>
                 </a>
             </div>
@@ -215,8 +263,8 @@ hide:
         <div class="section-content">
             <div class="anecdotes">
                 <div class="anecdote">
-                    <h4>请输入标题</h4>
-                    <p>请输入文本</p>
+                    <h4>🍓 水果三明治</h4>
+                    <p>曾有一次因为水果三明治售罄而在店内大哭，差点把整个店拆光，导致店主紧急调货，从此该店常备奶油草莓三明治。</p>
                 </div>
                 <div class="anecdote">
                     <h4>请输入标题</h4>
@@ -225,6 +273,20 @@ hide:
             </div>
         </div>
     </section>
+</div>
+                               
+<!-- 图片放大模态框 -->
+<div id="imageModal" class="image-modal">
+    <div class="modal-overlay" onclick="closeImageModal()"></div>
+    <div class="modal-content">
+        <button class="close-button" onclick="closeImageModal()">×</button>
+        <div class="modal-nav" onclick="changeImage(-1)">&lt;</div>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="放大图片">
+            <div class="modal-signature" id="modalSignature"></div>
+        </div>
+        <div class="modal-nav" onclick="changeImage(1)">&gt;</div>
+    </div>
 </div>
 
 <style>
@@ -244,9 +306,14 @@ hide:
 
 /* 图片区域 */
 .character-detail-image {
-    position: sticky;
     top: 20px;
     align-self: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-image-section {
+    top: 20px;
 }
 
 .main-image {
@@ -254,6 +321,12 @@ hide:
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.02);
 }
 
 .main-image img {
@@ -266,6 +339,7 @@ hide:
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .thumbnail {
@@ -291,6 +365,66 @@ hide:
     width: 100%;
     height: 80px;
     object-fit: cover;
+}
+
+/* 固定图集卡片 */
+.gallery-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--md-default-bg-color);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.gallery-nav {
+    width: 30px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(64, 158, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.gallery-nav:hover {
+    background: rgba(64, 158, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.gallery-image-container {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image-container:hover {
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* 署名样式 */
+.gallery-signature {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light);
 }
 
 /* 信息区域 */
@@ -739,6 +873,417 @@ hide:
     margin-right: 10px;
 }
 
+/* 关闭按钮样式 */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; /* 确保在模态框内容之上 */
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* 设定集板块样式 */
+.settings-collection {
+    margin-top: 20px;
+}
+
+.settings-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 切换按钮 */
+.settings-nav {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--md-primary-fg-color--light);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.settings-nav:hover {
+    background: var(--md-primary-fg-color);
+    transform: scale(1.1);
+}
+
+.settings-nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* 设定卡片容器 */
+.settings-cards-wrapper {
+    flex: 1;
+    max-width: 800px;
+    position: relative;
+    min-height: 300px; /* 为卡片切换动画预留高度 */
+}
+
+.settings-card {
+    display: none;
+    background: var(--md-default-bg-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    transition: all 0.3s ease;
+}
+
+.settings-card.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 设定卡片顶部（左图右文） */
+.setting-card-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 25px;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .setting-card-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* 左侧图片 */
+.setting-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting-main-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.setting-main-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* 右侧信息 */
+.setting-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.setting-title-row {
+    margin-bottom: 5px;
+}
+
+.setting-name {
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--md-primary-fg-color);
+    font-weight: bold;
+}
+
+.setting-author-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-label {
+    font-size: 0.95em;
+    color: var(--md-default-fg-color--light);
+}
+
+.author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--md-accent-fg-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(64, 158, 255, 0.1);
+}
+
+.author-link:hover {
+    background: rgba(64, 158, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.author-name {
+    font-size: 1em;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.setting-summary-row {
+    margin-top: 5px;
+}
+
+.setting-summary {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--md-default-fg-color);
+    line-height: 1.6;
+}
+
+/* 展开/收起按钮 */
+.setting-toggle-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 25px 20px;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.setting-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid var(--md-primary-fg-color--light);
+    color: var(--md-primary-fg-color);
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.setting-toggle-btn:hover {
+    background: var(--md-primary-fg-color--light);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.setting-card.active .setting-toggle-btn.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* 详细设定内容 */
+/* 详细设定内容 - 修复展开效果 */
+/* 详细设定内容 - 修复展开效果 */
+.setting-detail-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(to bottom, 
+        rgba(255,255,255,0.05) 0%, 
+        rgba(255,255,255,0.02) 100%);
+}
+
+/* 确保展开时内容可见 */
+.settings-card.active .setting-detail-content.expanded {
+    max-height: 5000px !important; /* 使用important确保覆盖内联样式 */
+    overflow: visible;
+}
+
+.setting-detail-text {
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+}
+
+.settings-card.active .setting-detail-content.expanded .setting-detail-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.setting-card.active .setting-detail-content.expanded {
+    max-height: 2000px; /* 足够大的值以容纳内容 */
+}
+
+.setting-detail-text {
+    padding: 30px;
+}
+
+.setting-detail-text h4 {
+    margin: 0 0 20px 0;
+    font-size: 1.3em;
+    color: var(--md-primary-fg-color);
+    border-bottom: 2px solid var(--md-primary-fg-color--light);
+    padding-bottom: 10px;
+}
+
+.setting-detail-text h5 {
+    margin: 25px 0 10px 0;
+    font-size: 1.1em;
+    color: var(--md-default-fg-color);
+}
+
+.setting-detail-text p, 
+.setting-detail-text li {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: var(--md-default-fg-color--light);
+}
+
+.setting-detail-text ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.setting-detail-text li {
+    margin-bottom: 8px;
+}
+
+/* 收起按钮（在详细内容底部） */
+.setting-collapse-container {
+    display: none;
+    justify-content: center;
+    padding: 20px 30px 30px;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.setting-card.active .setting-detail-content.expanded .setting-collapse-container {
+    display: flex;
+}
+
+.setting-collapse-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.setting-collapse-btn:hover {
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color);
+}
+
+.collapse-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* 指示器 */
+.settings-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--md-default-fg-color--lightest);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator-dot.active {
+    background: var(--md-primary-fg-color);
+    transform: scale(1.2);
+}
+
+.indicator-dot:hover {
+    transform: scale(1.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .settings-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .settings-nav {
+        width: 40px;
+        height: 40px;
+        order: 2;
+    }
+    
+    .settings-nav-left {
+        order: 1;
+    }
+    
+    .settings-nav-right {
+        order: 3;
+    }
+    
+    .setting-card-header {
+        padding: 20px;
+    }
+    
+    .setting-main-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .setting-name {
+        font-size: 1.4em;
+    }
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     .character-title {
@@ -766,12 +1311,118 @@ hide:
     .next-character {
         text-align: left;
     }
+    
+    .gallery-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gallery-nav {
+        width: 180px;
+        height: 30px;
+        align-self: center;
+    }
+}
+
+/* 图片放大模态框样式 */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+}
+
+.modal-nav {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.modal-image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    padding: 0 20px;
+}
+
+.modal-image-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-signature {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
+    max-width: 100%;
 }
 </style>
 
 <script>
+// ========== 全局函数定义 ==========
+
+// 图集数据（在全局作用域定义，供模态框使用）
+const galleryImages = [
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_1.png", signature: "其它形象1(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_2.png", signature: "其它形象2(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_3.png", signature: "其它形象3(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_4.png", signature: "其它形象4(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_5.png", signature: "其它形象5(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_6.png", signature: "其它形象6(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_7.png", signature: "其它形象7(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_8.png", signature: "其它形象8(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_9.png", signature: "其它形象9(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_10.png", signature: "其它形象10(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_11.png", signature: "其它形象11(待署名)"},
+    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_12.png", signature: "其它形象12(待署名)"},
+];
+
 // 缩略图切换
-document.addEventListener('DOMContentLoaded', function() {
+function initThumbnails() {
     const thumbnails = document.querySelectorAll('.thumbnail');
     const mainImage = document.getElementById('mainCharacterImage');
     
@@ -785,6 +1436,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 更新主图
             const newImage = this.getAttribute('data-image');
+            const newSignature = this.getAttribute('data-signature');
             if (newImage && newImage !== mainImage.src) {
                 // 添加淡出效果
                 mainImage.style.opacity = '0.5';
@@ -812,5 +1464,225 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // 图集切换功能
+    const galleryImage = document.getElementById('galleryImage');
+    const gallerySignature = document.getElementById('gallerySignature');
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    
+    let currentGalleryIndex = 0;
+    
+    function updateGalleryImage() {
+        galleryImage.style.opacity = '0.5'; // 淡出效果
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = '1'; // 加载完成后再淡入
+        };
+        galleryImage.onerror = () => {
+            galleryImage.src = 'https://via.placeholder.com/300x300.png'; // 加载失败时的占位图
+            galleryImage.style.opacity = '1';
+        };
+        galleryImage.src = galleryImages[currentGalleryIndex].src; // 更新图片
+        gallerySignature.textContent = galleryImages[currentGalleryIndex].signature; // 更新署名
+    }
+    
+    if (galleryPrev && galleryNext) {
+        galleryPrev.addEventListener('click', function(e) {
+            e.stopPropagation(); // 阻止事件冒泡
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateGalleryImage();
+        });
+        
+        galleryNext.addEventListener('click', function(e) {
+            e.stopPropagation(); // 阻止事件冒泡
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            updateGalleryImage();
+        });
+        
+        // 初始化图集
+        updateGalleryImage();
+    }
+}
+
+// 图片放大模态框功能
+let currentModalType = null;
+let currentModalIndex = 0;
+let modalImageSources = [];
+let modalSignatures = [];
+
+function openImageModal(type, element) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalSignature = document.getElementById('modalSignature');
+    
+    if (type === 'main') {
+        // 主图模式：获取所有缩略图数据
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        modalImageSources = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-image'));
+        modalSignatures = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-signature'));
+        // 找到当前缩略图的索引
+        const currentSrc = document.getElementById('mainCharacterImage').src;
+        currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
+        if (currentModalIndex === -1) currentModalIndex = 0;
+    } else if (type === 'gallery') {
+        // 图集模式：使用图集数据
+        modalImageSources = galleryImages.map(img => img.src);
+        modalSignatures = galleryImages.map(img => img.signature);
+        // 找到当前图集图片的索引
+        const currentSrc = document.getElementById('galleryImage').src;
+        currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
+        if (currentModalIndex === -1) currentModalIndex = 0;
+    }
+    
+    currentModalType = type;
+    modalImage.src = modalImageSources[currentModalIndex];
+    modalSignature.textContent = modalSignatures[currentModalIndex];
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 防止背景滚动
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // 恢复背景滚动
+}
+
+function changeImage(direction) {
+    if (currentModalType === null) return;
+    
+    currentModalIndex += direction;
+    
+    // 循环切换
+    if (currentModalIndex >= modalImageSources.length) {
+        currentModalIndex = 0;
+    } else if (currentModalIndex < 0) {
+        currentModalIndex = modalImageSources.length - 1;
+    }
+    
+    const modalImage = document.getElementById('modalImage');
+    const modalSignature = document.getElementById('modalSignature');
+    modalImage.src = modalImageSources[currentModalIndex];
+    modalSignature.textContent = modalSignatures[currentModalIndex];
+}
+
+// 设定集功能 - 全局函数
+let currentSettingIndex = 0;
+
+// 初始化设定卡片
+function initSettingsCards() {
+    const cards = document.querySelectorAll('.settings-card');
+    const dots = document.querySelectorAll('.indicator-dot');
+    
+    // 确保第一个卡片是激活状态
+    if (cards.length > 0) {
+        showSettingCard(0);
+    }
+    
+    // 为指示器添加点击事件
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            showSettingCard(index);
+        });
+    });
+}
+
+// 切换设定卡片 - 修复事件冒泡问题
+function changeSettingCard(direction) {
+    const cards = document.querySelectorAll('.settings-card');
+    
+    // 计算新索引
+    let newIndex = currentSettingIndex + direction;
+    
+    // 循环切换
+    if (newIndex >= cards.length) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = cards.length - 1;
+    }
+    
+    // 显示新卡片
+    showSettingCard(newIndex);
+}
+
+// 显示特定索引的设定卡片
+function showSettingCard(index) {
+    const cards = document.querySelectorAll('.settings-card');
+    const dots = document.querySelectorAll('.indicator-dot');
+    
+    // 隐藏所有卡片
+    cards.forEach(card => {
+        card.classList.remove('active');
+        // 同时收起所有卡片的详细内容
+        const detailContent = card.querySelector('.setting-detail-content');
+        if (detailContent) {
+            detailContent.classList.remove('expanded');
+            detailContent.style.maxHeight = '0px';
+        }
+        
+        // 恢复展开按钮文本
+        const toggleBtn = card.querySelector('.setting-toggle-btn');
+        if (toggleBtn) {
+            const toggleText = toggleBtn.querySelector('.toggle-text');
+            if (toggleText) {
+                toggleText.textContent = '展开设定详情';
+            }
+            toggleBtn.classList.remove('active');
+        }
+    });
+    
+    // 更新指示器
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    
+    // 显示目标卡片
+    if (cards[index]) {
+        cards[index].classList.add('active');
+        currentSettingIndex = index;
+    }
+    
+    // 激活对应指示器
+    if (dots[index]) {
+        dots[index].classList.add('active');
+    }
+}
+
+// ========== DOM加载完成后初始化 ==========
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化缩略图功能
+    initThumbnails();
+    
+    // 初始化设定卡片
+    initSettingsCards();
+    
+    // 为所有展开按钮添加事件监听器（修复方案）
+    document.querySelectorAll('.setting-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            toggleSettingDetail(this, e);
+        });
+    });
+    
+    // 为所有收起按钮添加事件监听器（修复方案）
+    document.querySelectorAll('.setting-collapse-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            toggleSettingDetail(this, e);
+        });
+    });
+    
+    // 为指示器添加点击事件（备用方案）
+    document.querySelectorAll('.indicator-dot').forEach(dot => {
+        dot.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            showSettingCard(index);
+        });
+    });
+});
+
+// 点击ESC键关闭模态框
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
 });
 </script>
