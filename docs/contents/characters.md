@@ -156,6 +156,7 @@ hide:
         <button class="filter-btn" data-filter="Mutsumi">Mutsumi</button>
         <button class="filter-btn" data-filter="Uika">Uika</button>
         <button class="filter-btn" data-filter="Umiri">Umiri</button>
+        <button class="filter-btn" data-filter="Nyamu">Nyamu</button>
         <button class="filter-btn" data-filter="...">...</button>
     </div>
     <input type="text" class="search-box" placeholder="搜索角色名称..." id="characterSearch">
