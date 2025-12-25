@@ -1,5 +1,5 @@
 ---
-title: Anon犬 详细资料
+title: Taki狼 详细资料
 layout: default
 hide:
   - navigation
@@ -21,22 +21,22 @@ hide:
     <div class="character-detail-image">
         <div class="fixed-image-section">
             <div class="main-image" onclick="openImageModal('main', this)">
-                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" 
-                     alt="Anon犬 主图" 
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf.png" 
+                     alt="Taki狼 主图" 
                      id="mainCharacterImage"
                      loading="eager">
             </div>
 
             <!-- 缩略图图集 -->
             <div class="thumbnail-gallery">
-                <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" data-signature="">
-                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" alt="主图">
+                <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf.png" alt="主图">
                 </div>
-                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic1.png" data-signature="">
-                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic1.png" alt="子图1">
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/pic1.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/pic1.png" alt="子图1">
                 </div>
-                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic2.png" data-signature="">
-                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/pic2.png" alt="子图2">
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/pic2.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/pic2.png" alt="子图2">
                 </div>
             </div>
         </div>
@@ -47,11 +47,11 @@ hide:
                 <span>&lt;</span>
             </div>
             <div class="gallery-image-container" onclick="openImageModal('gallery', this)">
-                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_1.png" 
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/others_1.png" 
                      alt="图集图片" 
                      id="galleryImage"
                      class="gallery-image">
-                <div class="gallery-signature" id="gallerySignature">其它形象1(待认领署名)</div>
+                <div class="gallery-signature" id="gallerySignature">其它形象1(待署名)</div>
             </div>
             <div class="gallery-nav" id="galleryNext">
                 <span>&gt;</span>
@@ -63,12 +63,12 @@ hide:
     <!-- 右侧信息区域 -->
     <div class="character-detail-info">
         <div class="character-header">
-            <h1 class="character-title">Anon犬</h1>
+            <h1 class="character-title">Taki狼</h1>
             <div class="character-tags">
-                <span class="tag primary">Anon系</span>
+                <span class="tag primary">Taki系</span>
                 <span class="tag secondary">犬科</span>
                 <span class="tag accent">棉花生物</span>
-                <span class="tag">活泼型</span>
+                <span class="tag"><del>反差</del>直率型</span>
             </div>
         </div>
         
@@ -77,28 +77,30 @@ hide:
             <table>
                 <tr>
                     <th>物种类型</th>
-                    <td>棉花犬型生物</td>
+                    <td>棉花狼型生物</td>
                 </tr>
                 <tr>
                     <th>毛色</th>
-                    <td>粉色系渐变</td>
+                    <td>黑棕色</td>
                 </tr>
                 <tr>
                     <th>首次发现</th>
-                    <td>2025年X月X日</td>
+                    <td>2025年x月x日</td>
                 </tr>
                 <tr>
                     <th>常见出没地</th>
-                    <td>人类居所内、草地、面包店、街边、<del>垃圾场</del></td>
+                    <td>城市中，草原上，打工场所，人类居所中</td>
                 </tr>
                 <tr>
                     <th>主要关联角色</th>
                     <td>
                         <a href="../tomori_penguin" class="character-link-small">Tomori企鹅</a>
+                        <a href="../anon_dog" class="character-link-small">Anon犬</a>
                         <a href="../soyo_fox" class="character-link-small">Soyo狸</a>
-                        <a href="../taki_wolf" class="character-link-small">Taki狼</a>
                         <a href="../rana_cat" class="character-link-small">Rana猫</a>
+                        <a href="../umiri_wolf" class="character-link-small">Umiri狼</a>
                         <a href="../saki_cat" class="character-link-small">Saki猫</a>
+                        <!-- 更多角色 -->
                     </td>
                 </tr>
                 <tr>
@@ -111,7 +113,7 @@ hide:
         <!-- 快速描述 -->
         <div class="quick-description">
             <h3>简介</h3>
-            <p>粉色棉花小狗，是MyGO!!!!!乐队的吉他手<del>兼主唱</del>......吗？情绪变化丰富，笑声与哭声洗脑，对水果三明治有特殊偏好。</p>
+            <p>黑棕色棉花小狼，是MyGO!!!!!乐队的鼓手......吗？行动利索，攻击性较强但情绪通常正常，偶有因Tomori企鹅而起伏或因自觉不足而起伏的情况，很喜欢熊猫。</p>
         </div>
         
         <!-- 特性指标 -->
@@ -121,23 +123,23 @@ hide:
                 <div class="stat-item">
                     <div class="stat-label">活泼度</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 90%;"></div>
+                        <div class="stat-fill" style="width: 70%;"></div>
                     </div>
-                    <div class="stat-value">9/10</div>
+                    <div class="stat-value">7/10</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-label">情绪波动</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 90%;"></div>
+                        <div class="stat-fill" style="width: 50%;"></div>
                     </div>
-                    <div class="stat-value">9/10</div>
+                    <div class="stat-value">5/10</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-label">破坏力</div>
                     <div class="stat-bar">
-                        <div class="stat-fill" style="width: 100%;"></div>
+                        <div class="stat-fill" style="width: 80%;"></div>
                     </div>
-                    <div class="stat-value">10/10</div>
+                    <div class="stat-value">8/10</div>
                 </div>
             </div>
         </div>
@@ -152,39 +154,32 @@ hide:
         <div class="section-content">
             <h3>饮食偏好</h3>
             <ul>
-                <li><strong>最爱食物：</strong>水果三明治</li>
-                <li><strong>常饮饮品：</strong>果汁果茶类饮料</li>
-                <li><strong>特殊习惯：</strong>进食时会发出唐笑声</li>
+                <li><strong>最爱食物：</strong>杏仁豆腐</li>
+                <li><strong>常饮饮品：</strong>咖啡</li>
+                <li><strong>特殊习惯：</strong>正常进食，但会被印有熊猫图案的食物引诱<del>，其实不是食物也会被引诱</del></li>
             </ul>
             
             <h3>行为模式</h3>
             <div class="behavior-patterns">
                 <div class="pattern-card">
-                    <div class="pattern-icon">😄</div>
+                    <div class="pattern-icon">🕬</div>
                     <div class="pattern-content">
-                        <h4>唐笑</h4>
-                        <p>当遇到开心事或吃到喜欢的水果三明治时，会突然发出响亮笑声，耳朵和尾巴乖巧地摆动。</p>
+                        <h4>嚎叫</h4>
+                        <p>认真点！这可不是小猫咪的哈气，一只小狼对你发火可不是开玩笑的！</p>
                     </div>
                 </div>
                 <div class="pattern-card">
-                    <div class="pattern-icon">😭</div>
+                    <div class="pattern-icon">🐺</div>
                     <div class="pattern-content">
-                        <h4>唐哭</h4>
-                        <p>情绪敏感，容易因<del>被人类欺负或虐██</del>各种原因突然哭泣。</p>
-                    </div>
-                </div>
-                <div class="pattern-card">
-                    <div class="pattern-icon">🏠️</div>
-                    <div class="pattern-content">
-                        <h4>拆家</h4>
-                        <p>一部分anon犬，它们被收养后自动触发破坏被动。</p>
+                        <h4><del>西北</del>希海独狼</h4>
+                        <p>不像正常的狼一样群居，Taki狼通常独来独往，只是偶有与Umiri狼结伴行动。</p>
                     </div>
                 </div>
                 <div class="pattern-card">
                     <div class="pattern-icon">🎸</div>
                     <div class="pattern-content">
                         <h4>音乐</h4>
-                        <p>手持吉他时进入专注状态，音乐表现力强。</p>
+                        <p>坐在架子鼓前便自然专注，竭尽全力于每次演奏。</p>
                     </div>
                 </div>
             </div>
@@ -195,18 +190,18 @@ hide:
     <section class="detail-section">
         <h2>背景故事</h2>
         <div class="section-content">
-            <p>Anon犬最初被发现于羽丘女子学园周边，因其独特的粉色棉花质地和情绪快速切换能力而引起研究者的关注。</p>
+            <p>Taki狼最初被发现于南极(？)科考人员在首次发现并捕捉Tomori企鹅后，它便冲了出来，科考人员差点以为北极狼跑到了南极，待到它身上的雪落下后，人们才发现它是黑棕色的。</p>
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2025年春</div>
+                    <div class="timeline-date">2025年x月</div>
                     <div class="timeline-content">
                         <h4>初次发现</h4>
-                        <p>在羽丘女子学园附近的咖啡馆被首次目击，当时正在偷吃顾客的水果三明治。</p>
+                        <p>首次被发现于南极，经推测，虽然在这里被人类首次发现，但这大概不是它们的第一出现地点，只是偶有跨海寻找并跟随Tomori企鹅的个体，之后的新个体主要生成于花咲川女子学园周边。</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">时间</div>
+                    <div class="timeline-date">请输入时间</div>
                     <div class="timeline-content">
                         <h4>请输入标题</h4>
                         <p>请输入文本</p>
@@ -221,36 +216,47 @@ hide:
         <h2>角色关系</h2>
         <div class="section-content">
             <div class="relationship-grid">
+                <a href="../umiri_wolf" class="relationship-card">
+                    <div class="rel-avatar">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/umiri_wolf.png" alt="Umiri狼">
+                    </div>
+                    <div class="rel-info">
+                        <h4>Umiri狼</h4>
+                        <p class="rel-type">伙伴 / 拍档</p>
+                        <p class="rel-desc">或许是早已相识，或许是有类似的节拍，虽然它们都习惯性独行，但还是存在偶有一起行动捕猎或交流的情况。</p>
+                    </div>
+                </a>
+                
                 <a href="../tomori_penguin" class="relationship-card">
                     <div class="rel-avatar">
                         <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/tomori_penguin.png" alt="Tomori企鹅">
                     </div>
                     <div class="rel-info">
                         <h4>Tomori企鹅</h4>
-                        <p class="rel-type">重要朋友</p>
-                        <p class="rel-desc">经常一起行动，Anon犬总是会好奇地观察Tomori企鹅。</p>
-                    </div>
-                </a>
-                
-                <a href="../soyo_fox" class="relationship-card">
-                    <div class="rel-avatar">
-                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox.png" alt="Soyo狸">
-                    </div>
-                    <div class="rel-info">
-                        <h4>Soyo狸</h4>
-                        <p class="rel-type">玩伴 / 情感依赖</p>
-                        <p class="rel-desc">Anon犬经常找Soyo狸玩耍，并且号称只是因为它们都是犬科所以好交流。</p>
+                        <p class="rel-type">捕猎 / 伙伴</p>
+                        <p class="rel-desc">虽然相互为伙伴，但Taki狼却对Tomori企鹅动了一点其他心思，或许是捕食？或许是其它的？也有可能是想喜欢熊猫一样喜欢同为黑白主配色的企鹅吧。具体是如何我们也不清楚，不过它们间的行动模式很微妙。</p>
                     </div>
                 </a>
 
-                <a href="../角色名.md" class="relationship-card">
+                <a href="../anon_dog" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/角色名.png" alt="角色名">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog.png" alt="Anon犬">
                     </div>
                     <div class="rel-info">
-                        <h4>角色名</h4>
-                        <p class="rel-type">关系</p>
-                        <p class="rel-desc">请输入文本（描述）</p>
+                        <h4>Anon犬</h4>
+                        <p class="rel-type">天敌</p>
+                        <p class="rel-desc">Anon犬通常作为小型家养犬，被呵护的很好时在外会有一些不收敛的嘚瑟行为，同为犬科的Taki狼不太看得惯Anon犬，有时会对其进行嚎叫恐吓，被嚎叫的Anon犬通常会一边唐哭一边跑掉。</p>
+                    </div>
+                </a>
+
+                <a href="../rana_cat" class="relationship-card">
+                    <div class="rel-avatar">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/rana_cat.png" alt="Rana猫">
+                    </div>
+                    <div class="rel-info">
+                        <h4>Rana猫</h4>
+                        <p class="rel-type">哺育</p>
+                        <p class="rel-desc">很多，几乎是每只Taki狼总会在长大到一定时候时遇到一只Rana猫，窜来窜去，Taki狼一般会稍微有些恼火，但也没办法，后来为了抓住它不断尝试用食物引诱它上钩，但食物被叼走后仍然被它灵活地逃走，直到某一次用一个抹茶味的小零嘴吸引住它，像是猫薄荷对一般的猫一样将Rana猫控住(温馨提示：不想被抓伤的话，请不要真的用薄荷捕捉Rana猫)，欲罢不能，但Rana猫的吃相可爱使得Taki狼不忍心捕捉，竟看呆住了，于是片刻间，Rana猫再次逃走。<del>后来不知怎的，Taki狼也不再抓，但是会时不时喂食，变成了长期饭票</del></p>
                     </div>
                 </a>
             </div>
@@ -263,18 +269,45 @@ hide:
         <div class="section-content">
             <div class="anecdotes">
                 <div class="anecdote">
-                    <h4>🍓 水果三明治</h4>
-                    <p>曾有一次因为水果三明治售罄而在店内大哭，差点把整个店拆光，导致店主紧急调货，从此该店常备奶油草莓三明治。</p>
+                    <h4>🐼 诱捕！</h4>
+                    <p>生活在草原的部分人类有时会饲养大型Anon犬用以放牧，但是一些尚幼小的Anon犬个体会被Taki狼恐吓形成阴影，导致长大后也不敢步入草原深处。这样子不是办法，于是牧人们决定捕狼，原以为是一个麻烦事，却没想到Taki狼被一罐印着熊猫标志的巧克力奶<del>(因未知原因，Taki狼并未因巧克力感到不适，甚至还挺喜欢)</del>所“收买”，牧人们逐渐驯服Taki狼并用以替代Anon犬放牧，效果很好。<del>失去放牧作用的大量Anon犬们被丢弃。</del></p>
                 </div>
                 <div class="anecdote">
-                    <h4>请输入标题</h4>
+                    <h4><emoji> 请输入事件标题</h4>
                     <p>请输入文本</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 设定集板块 -->
+    <section class="detail-section">
+        <h2>设定集</h2>
+        <div class="section-content">
+            <div class="settings-collection">
+                <!-- 轮播导航按钮 -->
+                <div class="settings-nav prev" onclick="changeSettingCard(-1)">
+                    <span>&lt;</span>
+                </div>
+                
+                <!-- 设定卡片容器 -->
+                <div class="settings-container">
+                    <!-- 设定卡片将在这里动态生成 -->
+                </div>
+                
+                <div class="settings-nav next" onclick="changeSettingCard(1)">
+                    <span>&gt;</span>
+                </div>
+                
+                <!-- 卡片指示器 -->
+                <div class="settings-indicator">
+                    <span class="current-card">1</span> / <span class="total-cards">3</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-                               
+
 <!-- 图片放大模态框 -->
 <div id="imageModal" class="image-modal">
     <div class="modal-overlay" onclick="closeImageModal()"></div>
@@ -899,33 +932,33 @@ hide:
     transform: scale(1.1);
 }
 
-/* 设定集板块样式 */
+/* 设定集样式 */
 .settings-collection {
-    margin-top: 20px;
-}
-
-.settings-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 20px 0;
 }
 
-/* 切换按钮 */
 .settings-nav {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     background: var(--md-primary-fg-color--light);
     color: white;
+    border-radius: 50%;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
     transition: all 0.3s ease;
     flex-shrink: 0;
     user-select: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .settings-nav:hover {
@@ -933,108 +966,72 @@ hide:
     transform: scale(1.1);
 }
 
-.settings-nav svg {
-    width: 24px;
-    height: 24px;
-}
-
-/* 设定卡片容器 */
-.settings-cards-wrapper {
-    flex: 1;
-    max-width: 800px;
+.settings-container {
+    width: 600px;
+    min-height: 300px;
     position: relative;
-    min-height: 300px; /* 为卡片切换动画预留高度 */
 }
 
 .settings-card {
-    display: none;
     background: var(--md-default-bg-color);
     border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: all 0.4s ease;
     border: 1px solid var(--md-default-fg-color--lightest);
-    transition: all 0.3s ease;
 }
 
-.settings-card.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0.5; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 设定卡片顶部（左图右文） */
-.setting-card-header {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 25px;
+/* 折叠状态样式 */
+.settings-card.collapsed {
     padding: 25px;
 }
 
-@media (max-width: 768px) {
-    .setting-card-header {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
-
-/* 左侧图片 */
-.setting-image {
+.settings-content.collapsed {
     display: flex;
+    gap: 25px;
     align-items: center;
-    justify-content: center;
 }
 
-.setting-main-image {
-    width: 180px;
-    height: 180px;
+.settings-image {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
     border-radius: 20px;
-    object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    border: 4px solid rgba(100, 200, 255, 0.2);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
 
-.setting-main-image:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+.settings-image:hover {
+    transform: scale(1.02);
+    border-color: var(--md-primary-fg-color--light);
 }
 
-/* 右侧信息 */
-.setting-info {
+.settings-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.settings-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-}
-
-.setting-title-row {
-    margin-bottom: 5px;
-}
-
-.setting-name {
-    margin: 0;
-    font-size: 1.6em;
-    color: var(--md-primary-fg-color);
-    font-weight: bold;
-}
-
-.setting-author-row {
-    display: flex;
-    align-items: center;
     gap: 10px;
 }
 
-.author-info {
+.setting-name {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--md-primary-fg-color);
+    margin: 0;
+}
+
+.setting-author {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.author-label {
     font-size: 0.95em;
     color: var(--md-default-fg-color--light);
 }
@@ -1043,244 +1040,221 @@ hide:
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    color: var(--md-primary-fg-color);
     text-decoration: none;
-    color: var(--md-accent-fg-color);
-    font-weight: 500;
-    transition: all 0.3s ease;
     padding: 4px 10px;
-    border-radius: 6px;
     background: rgba(64, 158, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.2s ease;
 }
 
 .author-link:hover {
     background: rgba(64, 158, 255, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
-.author-name {
-    font-size: 1em;
+.platform-icon-img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
 }
 
-.social-icon {
-    width: 18px;
-    height: 18px;
-}
-
-.setting-summary-row {
-    margin-top: 5px;
-}
-
-.setting-summary {
-    margin: 0;
-    font-size: 0.95em;
+.setting-intro {
+    font-size: 0.9em;
     color: var(--md-default-fg-color);
-    line-height: 1.6;
+    line-height: 1.5;
+    margin: 5px 0 0 0;
 }
 
-/* 展开/收起按钮 */
-.setting-toggle-container {
-    display: flex;
-    justify-content: center;
-    padding: 0 25px 20px;
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
-}
-
-.setting-toggle-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border: 2px solid var(--md-primary-fg-color--light);
-    color: var(--md-primary-fg-color);
-    padding: 10px 24px;
+/* 展开按钮 */
+.expand-button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 8px 24px;
+    background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+    color: white;
+    border: none;
     border-radius: 25px;
-    font-size: 0.95em;
+    font-size: 0.9em;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    outline: none;
+    box-shadow: 0 4px 12px rgba(64, 158, 255, 0.3);
 }
 
-.setting-toggle-btn:hover {
-    background: var(--md-primary-fg-color--light);
-    color: white;
+.expand-button:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(64, 158, 255, 0.4);
 }
 
-.toggle-icon {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
+/* 展开状态样式 */
+.settings-card.expanded {
+    padding: 0;
 }
 
-.setting-card.active .setting-toggle-btn.active .toggle-icon {
-    transform: rotate(180deg);
+.settings-content.expanded {
+    padding: 25px;
 }
 
-/* 详细设定内容 */
-/* 详细设定内容 - 修复展开效果 */
-/* 详细设定内容 - 修复展开效果 */
-.setting-detail-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(to bottom, 
-        rgba(255,255,255,0.05) 0%, 
-        rgba(255,255,255,0.02) 100%);
+.expanded-top {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    margin-bottom: 20px;
 }
 
-/* 确保展开时内容可见 */
-.settings-card.active .setting-detail-content.expanded {
-    max-height: 5000px !important; /* 使用important确保覆盖内联样式 */
-    overflow: visible;
+.expanded-detail {
+    padding: 20px 0;
 }
 
-.setting-detail-text {
-    padding: 30px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
-}
-
-.settings-card.active .setting-detail-content.expanded .setting-detail-text {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.setting-card.active .setting-detail-content.expanded {
-    max-height: 2000px; /* 足够大的值以容纳内容 */
-}
-
-.setting-detail-text {
-    padding: 30px;
-}
-
-.setting-detail-text h4 {
-    margin: 0 0 20px 0;
-    font-size: 1.3em;
-    color: var(--md-primary-fg-color);
-    border-bottom: 2px solid var(--md-primary-fg-color--light);
-    padding-bottom: 10px;
-}
-
-.setting-detail-text h5 {
-    margin: 25px 0 10px 0;
-    font-size: 1.1em;
+.detail-content {
+    font-size: 0.95em;
+    line-height: 1.6;
     color: var(--md-default-fg-color);
 }
 
-.setting-detail-text p, 
-.setting-detail-text li {
-    font-size: 0.95em;
-    line-height: 1.7;
-    color: var(--md-default-fg-color--light);
+.detail-content h4 {
+    color: var(--md-primary-fg-color);
+    margin: 20px 0 10px 0;
+    font-size: 1.1em;
 }
 
-.setting-detail-text ul {
-    padding-left: 20px;
+.detail-content p {
     margin: 10px 0;
 }
 
-.setting-detail-text li {
-    margin-bottom: 8px;
+.detail-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
 }
 
-/* 收起按钮（在详细内容底部） */
-.setting-collapse-container {
-    display: none;
-    justify-content: center;
-    padding: 20px 30px 30px;
-    border-top: 1px solid var(--md-default-fg-color--lightest);
+.detail-content li {
+    margin: 5px 0;
 }
 
-.setting-card.active .setting-detail-content.expanded .setting-collapse-container {
-    display: flex;
-}
-
-.setting-collapse-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border: 2px solid var(--md-default-fg-color--lightest);
-    color: var(--md-default-fg-color--light);
-    padding: 8px 20px;
+/* 收起按钮 */
+.collapse-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 24px;
+    background: var(--md-default-bg-color--light);
+    color: var(--md-default-fg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
     border-radius: 25px;
     font-size: 0.9em;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    outline: none;
 }
 
-.setting-collapse-btn:hover {
+.collapse-button:hover {
     background: var(--md-default-fg-color--lightest);
-    color: var(--md-default-fg-color);
+    transform: translateY(-2px);
 }
 
-.collapse-icon {
-    width: 18px;
-    height: 18px;
-}
-
-/* 指示器 */
+/* 卡片指示器 */
 .settings-indicator {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 25px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light);
+    background: var(--md-default-bg-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.indicator-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--md-default-fg-color--lightest);
-    cursor: pointer;
+.current-card {
+    color: var(--md-primary-fg-color);
+    font-weight: bold;
+}
+
+/* 设定集图片点击效果 */
+.settings-image {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid rgba(100, 200, 255, 0.2);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    cursor: pointer; /* 添加指针样式 */
 }
 
-.indicator-dot.active {
-    background: var(--md-primary-fg-color);
-    transform: scale(1.2);
+.settings-image:hover {
+    transform: scale(1.02);
+    border-color: var(--md-primary-fg-color--light);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* 增强悬停效果 */
 }
 
-.indicator-dot:hover {
-    transform: scale(1.3);
+/* 点击态反馈 */
+.settings-image:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* 展开状态下的图片样式 */
+.expanded-top .settings-image {
+    width: 180px;
+    height: 180px;
+}
+
+@media (max-width: 768px) {
+    .settings-image {
+        width: 120px;
+        height: 120px;
+    }
+    .expanded-top .settings-image {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .settings-container {
+    .settings-collection {
         flex-direction: column;
         gap: 15px;
     }
     
+    .settings-container {
+        width: 100%;
+    }
+    
     .settings-nav {
-        width: 40px;
-        height: 40px;
-        order: 2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
     }
     
-    .settings-nav-left {
-        order: 1;
+    .settings-nav.prev {
+        left: 10px;
     }
     
-    .settings-nav-right {
-        order: 3;
+    .settings-nav.next {
+        right: 10px;
     }
     
-    .setting-card-header {
-        padding: 20px;
+    .settings-content.collapsed,
+    .expanded-top {
+        flex-direction: column;
+        text-align: center;
     }
     
-    .setting-main-image {
-        width: 150px;
-        height: 150px;
+    .settings-image {
+        width: 120px;
+        height: 120px;
     }
     
-    .setting-name {
-        font-size: 1.4em;
+    .setting-author {
+        justify-content: center;
     }
 }
 
@@ -1403,26 +1377,8 @@ hide:
 </style>
 
 <script>
-// ========== 全局函数定义 ==========
-
-// 图集数据（在全局作用域定义，供模态框使用）
-const galleryImages = [
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_1.png", signature: "其它形象1(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_2.png", signature: "其它形象2(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_3.png", signature: "其它形象3(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_4.png", signature: "其它形象4(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_5.png", signature: "其它形象5(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_6.png", signature: "其它形象6(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_7.png", signature: "其它形象7(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_8.png", signature: "其它形象8(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_9.png", signature: "其它形象9(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_10.png", signature: "其它形象10(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_11.png", signature: "其它形象11(待署名)"},
-    {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/anon_dog/others_12.png", signature: "其它形象12(待署名)"},
-];
-
 // 缩略图切换
-function initThumbnails() {
+document.addEventListener('DOMContentLoaded', function() {
     const thumbnails = document.querySelectorAll('.thumbnail');
     const mainImage = document.getElementById('mainCharacterImage');
     
@@ -1471,6 +1427,12 @@ function initThumbnails() {
     const galleryPrev = document.getElementById('galleryPrev');
     const galleryNext = document.getElementById('galleryNext');
     
+    // 图集图片数组（这里使用示例图片，实际应用中可以动态加载）
+    const galleryImages = [
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/others_1.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/others_2.png", signature: "其它形象2(待署名)"}
+    ];
+    
     let currentGalleryIndex = 0;
     
     function updateGalleryImage() {
@@ -1486,23 +1448,16 @@ function initThumbnails() {
         gallerySignature.textContent = galleryImages[currentGalleryIndex].signature; // 更新署名
     }
     
-    if (galleryPrev && galleryNext) {
-        galleryPrev.addEventListener('click', function(e) {
-            e.stopPropagation(); // 阻止事件冒泡
-            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
-            updateGalleryImage();
-        });
-        
-        galleryNext.addEventListener('click', function(e) {
-            e.stopPropagation(); // 阻止事件冒泡
-            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
-            updateGalleryImage();
-        });
-        
-        // 初始化图集
+    galleryPrev.addEventListener('click', function() {
+        currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
         updateGalleryImage();
-    }
-}
+    });
+    
+    galleryNext.addEventListener('click', function() {
+        currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+        updateGalleryImage();
+    });
+});
 
 // 图片放大模态框功能
 let currentModalType = null;
@@ -1514,6 +1469,7 @@ function openImageModal(type, element) {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const modalSignature = document.getElementById('modalSignature');
+    const modalNavs = document.querySelectorAll('.modal-nav'); // 获取所有左右切换按钮
     
     if (type === 'main') {
         // 主图模式：获取所有缩略图数据
@@ -1524,6 +1480,10 @@ function openImageModal(type, element) {
         const currentSrc = document.getElementById('mainCharacterImage').src;
         currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
         if (currentModalIndex === -1) currentModalIndex = 0;
+        
+        // 显示左右切换按钮
+        modalNavs.forEach(nav => nav.style.display = 'flex');
+        
     } else if (type === 'gallery') {
         // 图集模式：使用图集数据
         modalImageSources = galleryImages.map(img => img.src);
@@ -1532,6 +1492,28 @@ function openImageModal(type, element) {
         const currentSrc = document.getElementById('galleryImage').src;
         currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
         if (currentModalIndex === -1) currentModalIndex = 0;
+        
+        // 显示左右切换按钮
+        modalNavs.forEach(nav => nav.style.display = 'flex');
+        
+    } else if (type === 'setting') {
+        // 设定集图片模式
+        const imgElement = element.querySelector('img') || element;
+        const settingName = element.closest('.settings-card').querySelector('.setting-name')?.textContent || '设定图';
+        
+        modalImageSources = [imgElement.src];
+        modalSignatures = [settingName];
+        currentModalIndex = 0;
+        
+        // 隐藏左右切换按钮
+        modalNavs.forEach(nav => nav.style.display = 'none');
+        
+        // 添加淡入动画
+        modalImage.style.opacity = '0';
+        setTimeout(() => {
+            modalImage.style.opacity = '1';
+            modalImage.style.transition = 'opacity 0.3s ease';
+        }, 10);
     }
     
     currentModalType = type;
@@ -1543,11 +1525,22 @@ function openImageModal(type, element) {
 
 function closeImageModal() {
     const modal = document.getElementById('imageModal');
+    const modalNavs = document.querySelectorAll('.modal-nav');
+    
+    // 重置所有按钮为显示状态
+    modalNavs.forEach(nav => nav.style.display = 'flex');
+    
     modal.style.display = 'none';
     document.body.style.overflow = 'auto'; // 恢复背景滚动
+    currentModalType = null; // 重置当前模态框类型
 }
 
 function changeImage(direction) {
+    // 如果是设定集类型，不执行切换
+    if (currentModalType === 'setting') {
+        return;
+    }
+    
     if (currentModalType === null) return;
     
     currentModalIndex += direction;
@@ -1565,124 +1558,253 @@ function changeImage(direction) {
     modalSignature.textContent = modalSignatures[currentModalIndex];
 }
 
-// 设定集功能 - 全局函数
-let currentSettingIndex = 0;
-
-// 初始化设定卡片
-function initSettingsCards() {
-    const cards = document.querySelectorAll('.settings-card');
-    const dots = document.querySelectorAll('.indicator-dot');
-    
-    // 确保第一个卡片是激活状态
-    if (cards.length > 0) {
-        showSettingCard(0);
-    }
-    
-    // 为指示器添加点击事件
-    dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-            const index = parseInt(this.getAttribute('data-index'));
-            showSettingCard(index);
-        });
-    });
-}
-
-// 切换设定卡片 - 修复事件冒泡问题
-function changeSettingCard(direction) {
-    const cards = document.querySelectorAll('.settings-card');
-    
-    // 计算新索引
-    let newIndex = currentSettingIndex + direction;
-    
-    // 循环切换
-    if (newIndex >= cards.length) {
-        newIndex = 0;
-    } else if (newIndex < 0) {
-        newIndex = cards.length - 1;
-    }
-    
-    // 显示新卡片
-    showSettingCard(newIndex);
-}
-
-// 显示特定索引的设定卡片
-function showSettingCard(index) {
-    const cards = document.querySelectorAll('.settings-card');
-    const dots = document.querySelectorAll('.indicator-dot');
-    
-    // 隐藏所有卡片
-    cards.forEach(card => {
-        card.classList.remove('active');
-        // 同时收起所有卡片的详细内容
-        const detailContent = card.querySelector('.setting-detail-content');
-        if (detailContent) {
-            detailContent.classList.remove('expanded');
-            detailContent.style.maxHeight = '0px';
-        }
-        
-        // 恢复展开按钮文本
-        const toggleBtn = card.querySelector('.setting-toggle-btn');
-        if (toggleBtn) {
-            const toggleText = toggleBtn.querySelector('.toggle-text');
-            if (toggleText) {
-                toggleText.textContent = '展开设定详情';
-            }
-            toggleBtn.classList.remove('active');
-        }
-    });
-    
-    // 更新指示器
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-    
-    // 显示目标卡片
-    if (cards[index]) {
-        cards[index].classList.add('active');
-        currentSettingIndex = index;
-    }
-    
-    // 激活对应指示器
-    if (dots[index]) {
-        dots[index].classList.add('active');
-    }
-}
-
-// ========== DOM加载完成后初始化 ==========
-document.addEventListener('DOMContentLoaded', function() {
-    // 初始化缩略图功能
-    initThumbnails();
-    
-    // 初始化设定卡片
-    initSettingsCards();
-    
-    // 为所有展开按钮添加事件监听器（修复方案）
-    document.querySelectorAll('.setting-toggle-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            toggleSettingDetail(this, e);
-        });
-    });
-    
-    // 为所有收起按钮添加事件监听器（修复方案）
-    document.querySelectorAll('.setting-collapse-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            toggleSettingDetail(this, e);
-        });
-    });
-    
-    // 为指示器添加点击事件（备用方案）
-    document.querySelectorAll('.indicator-dot').forEach(dot => {
-        dot.addEventListener('click', function() {
-            const index = parseInt(this.getAttribute('data-index'));
-            showSettingCard(index);
-        });
-    });
-});
-
 // 点击ESC键关闭模态框
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeImageModal();
     }
+    
+    // 如果是设定集类型，不响应左右箭头切换
+    if (currentModalType === 'setting') {
+        return;
+    }
+    
+    // 左右箭头切换图片（仅限非设定集类型）
+    if (event.key === 'ArrowLeft') {
+        changeImage(-1);
+        event.preventDefault(); // 防止滚动
+    } else if (event.key === 'ArrowRight') {
+        changeImage(1);
+        event.preventDefault(); // 防止滚动
+    }
+});
+
+// 图集数据（在全局作用域定义，供模态框使用）
+const galleryImages = [
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/others_1.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/others_2.png", signature: "其它形象2(待署名)"}
+];
+
+// 设定集数据
+const settingsData = 
+[
+    {
+        id: 1,
+        image: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/settings_1.png",
+        name: "设定名（例）",
+        author: "作者",
+        authorLink: "此处放入社媒链接",
+        platform: "bilibili",
+        intro: "一句话简介",
+        detail: 
+            `
+            <h4>角色背景</h4>
+            <p>请输入背景</p>
+            
+            <h4>日常行为</h4>
+            <ul>
+                <li>行为1</li>
+                <li>行为2</li>
+            </ul>
+            
+            <h4>特殊习惯</h4>
+            <p>请输入文本</p>
+
+            <h4>更多内容</h4>
+            <p>......</p>
+            `
+    },
+    {
+        id: 2,
+        image: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/taki_wolf/settings_2.png",
+        name: "设定名（例）",
+        author: "作者名",
+        authorLink: "此处放入社媒链接",
+        platform: "bilibili",
+        intro: "一句话简介",
+        detail: 
+            `
+            <h4>习性</h4>
+            <p>请输入文本</p>
+            
+            <h4>捕食行为</h4>
+            <p>请输入文本</p>
+            
+            <h4>请输入标题</h4>
+            <p>请输入文本</p>
+
+            <h4>更多内容</h4>
+            <p>......</p>
+            `
+    },
+];
+
+// 平台图标映射 - 使用外部链接
+const platformIcons = {
+    bilibili: '<img src="https://img.icons8.com/ios-filled/16/000000/bilibili.png" class="platform-icon-img" alt="Bilibili">',
+    twitter: '<img src="https://img.icons8.com/ios-filled/16/000000/twitter.png" class="platform-icon-img" alt="Twitter">',
+    pixiv: '<img src="https://img.icons8.com/ios-filled/16/000000/picture.png" class="platform-icon-img" alt="Pixiv">'
+};
+
+let currentSettingIndex = 0;
+let settingsContainer = null;
+
+// 新增：跟踪每个卡片的展开状态
+let cardStates = {};
+
+// 初始化设定集
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化所有卡片的展开状态为false（折叠）
+    settingsData.forEach(setting => {
+        cardStates[setting.id] = false;
+    });
+    
+    renderSettingCard();
+});
+
+// 渲染当前设定卡片
+// 渲染当前设定卡片
+function renderSettingCard() {
+    const setting = settingsData[currentSettingIndex];
+    const isExpanded = cardStates[setting.id] || false;
+    
+    // 确保settingsContainer存在
+    if (!settingsContainer) {
+        settingsContainer = document.querySelector('.settings-container');
+        if (!settingsContainer) return;
+    }
+    
+    const cardHTML = `
+        <div class="settings-card ${isExpanded ? 'expanded' : 'collapsed'}" data-id="${setting.id}">
+            <div class="settings-content ${isExpanded ? 'expanded' : 'collapsed'}">
+                ${isExpanded ? `
+                    <div class="expanded-top">
+                        <div class="settings-image" onclick="openImageModal('setting', this)">
+                            <img src="${setting.image}" alt="${setting.name}" loading="lazy">
+                        </div>
+                        <div class="settings-info">
+                            <h3 class="setting-name">${setting.name}</h3>
+                            <div class="setting-author">
+                                作者：
+                                <a href="${setting.authorLink}" target="_blank" class="author-link">
+                                    ${platformIcons[setting.platform] || platformIcons.bilibili}
+                                    ${setting.author}
+                                </a>
+                            </div>
+                            <p class="setting-intro">${setting.intro}</p>
+                        </div>
+                    </div>
+                    <div class="expanded-detail">
+                        <div class="detail-content">${setting.detail}</div>
+                        <button class="collapse-button" onclick="toggleCard(${setting.id})">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            收起详情
+                        </button>
+                    </div>
+                ` : `
+                    <div class="settings-image" onclick="openImageModal('setting', this)">
+                        <img src="${setting.image}" alt="${setting.name}" loading="lazy">
+                    </div>
+                    <div class="settings-info">
+                        <h3 class="setting-name">${setting.name}</h3>
+                        <div class="setting-author">
+                            作者：
+                            <a href="${setting.authorLink}" target="_blank" class="author-link">
+                                ${platformIcons[setting.platform] || platformIcons.bilibili}
+                                ${setting.author}
+                            </a>
+                        </div>
+                        <p class="setting-intro">${setting.intro}</p>
+                    </div>
+                    <button class="expand-button" onclick="toggleCard(${setting.id})">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        展开详情
+                    </button>
+                `}
+            </div>
+        </div>
+    `;
+    
+    settingsContainer.innerHTML = cardHTML;
+    updateIndicator();
+}
+
+// 切换卡片展开/收起状态 - 修复版
+function toggleCard(cardId) {
+    // 如果没有传入cardId，使用当前卡片的id
+    if (!cardId) {
+        cardId = settingsData[currentSettingIndex].id;
+    }
+    
+    // 切换该卡片的展开状态
+    cardStates[cardId] = !cardStates[cardId];
+    
+    // 重新渲染当前卡片
+    renderSettingCard();
+}
+
+// 切换设定卡片 - 修复版
+function changeSettingCard(direction) {
+    currentSettingIndex = (currentSettingIndex + direction + settingsData.length) % settingsData.length;
+    renderSettingCard();
+}
+
+// 更新指示器
+function updateIndicator() {
+    const currentSpan = document.querySelector('.current-card');
+    const totalSpan = document.querySelector('.total-cards');
+    
+    if (currentSpan) currentSpan.textContent = currentSettingIndex + 1;
+    if (totalSpan) totalSpan.textContent = settingsData.length;
+}
+
+// 添加图片加载错误处理
+document.addEventListener('DOMContentLoaded', function() {
+    // 监听图片加载错误
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG' && e.target.parentElement.classList.contains('settings-image')) {
+            e.target.src = 'https://via.placeholder.com/300x300/4a90e2/ffffff?text=设定图';
+            console.log('设定图片加载失败，已替换为占位图');
+        }
+    }, true);
+});
+
+// 添加图片加载状态处理
+document.addEventListener('DOMContentLoaded', function() {
+    // 监听设定集图片的点击事件（事件委托）
+    document.addEventListener('click', function(e) {
+        // 如果点击的是设定集图片
+        if (e.target.closest('.settings-image')) {
+            const imgContainer = e.target.closest('.settings-image');
+            const img = imgContainer.querySelector('img');
+            
+            // 添加点击反馈
+            imgContainer.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                imgContainer.style.transform = 'scale(1)';
+            }, 150);
+            
+            // 检查图片是否已加载
+            if (!img.complete || img.naturalHeight === 0) {
+                console.log('设定图片正在加载...');
+                // 可以在这里添加加载指示器
+            }
+        }
+    });
+    
+    // 预加载设定集图片，提高用户体验
+    function preloadSettingsImages() {
+        settingsData.forEach(setting => {
+            const img = new Image();
+            img.src = setting.image;
+        });
+    }
+    
+    // 页面加载后预加载图片
+    setTimeout(preloadSettingsImages, 1000);
 });
 </script>

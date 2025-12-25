@@ -121,3 +121,6 @@ nav:
 # 页脚
 extra:
   generator: false  # 隐藏"Powered by MkDocs"
+
+extra_javascript:
+  - js/christmas.js

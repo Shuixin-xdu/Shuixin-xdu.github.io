@@ -1,5 +1,5 @@
 ---
-title: 角色名 详细资料
+title: <角色名> 详细资料
 layout: default
 hide:
   - navigation
@@ -19,36 +19,56 @@ hide:
 <div class="character-detail-container">
     <!-- 左侧图片区域 -->
     <div class="character-detail-image">
-        <div class="main-image">
-            <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/角色名.png" 
-                 alt="角色名 主图" 
-                 id="mainCharacterImage"
-                 loading="eager">
+        <div class="fixed-image-section">
+            <div class="main-image" onclick="openImageModal('main', this)">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>.png" 
+                     alt="<角色名> 主图" 
+                     id="mainCharacterImage"
+                     loading="eager">
+            </div>
+
+            <!-- 缩略图图集 -->
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>.png" alt="主图">
+                </div>
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/pic1.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/pic1.png" alt="子图1">
+                </div>
+                <div class="thumbnail" data-image="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/pic2.png" data-signature="">
+                    <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/pic2.png" alt="子图2">
+                </div>
+            </div>
         </div>
-        
-        <!-- 缩略图图集 -->
-        <div class="thumbnail-gallery">
-            <div class="thumbnail active" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/soyo_fox.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/角色名.png" alt="主图">
+
+        <!-- 固定图集卡片 -->
+        <div class="gallery-card">
+            <div class="gallery-nav" id="galleryPrev">
+                <span>&lt;</span>
             </div>
-            <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/soyo_fox/pic1.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/角色名/pic1.png" alt="子图1">
+            <div class="gallery-image-container" onclick="openImageModal('gallery', this)">
+                <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_1.png" 
+                     alt="图集图片" 
+                     id="galleryImage"
+                     class="gallery-image">
+                <div class="gallery-signature" id="gallerySignature">其它形象1(待署名)</div>
             </div>
-            <div class="thumbnail" data-image="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/soyo_fox/pic2.png">
-                <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/characters/角色名/pic2.png" alt="子图2">
+            <div class="gallery-nav" id="galleryNext">
+                <span>&gt;</span>
             </div>
         </div>
     </div>
+
     
     <!-- 右侧信息区域 -->
     <div class="character-detail-info">
         <div class="character-header">
-            <h1 class="character-title">角色名</h1>
+            <h1 class="character-title"><角色名></h1>
             <div class="character-tags">
-                <span class="tag primary">xx系</span>
-                <span class="tag secondary">x科</span>
+                <span class="tag primary"><角色原型>系</span>
+                <span class="tag secondary"><生物种类>科</span>
                 <span class="tag accent">棉花生物</span>
-                <span class="tag">xx型</span>
+                <span class="tag"><性格>型</span>
             </div>
         </div>
         
@@ -57,25 +77,26 @@ hide:
             <table>
                 <tr>
                     <th>物种类型</th>
-                    <td>棉花x型生物</td>
+                    <td>棉花<生物种类>型生物</td>
                 </tr>
                 <tr>
                     <th>毛色</th>
-                    <td>xxx</td>
+                    <td>请输入颜色</td>
                 </tr>
                 <tr>
                     <th>首次发现</th>
-                    <td>xxx</td>
+                    <td>2025年x月x日</td>
                 </tr>
                 <tr>
                     <th>常见出没地</th>
-                    <td>xxx</td>
+                    <td>请输入地点</td>
                 </tr>
                 <tr>
-                    <th>关联角色</th>
+                    <th>主要关联角色</th>
                     <td>
-                        <a href="../其它角色名1" class="character-link-small">其它角色名1</a>
-                        <a href="../其它角色名2" class="character-link-small">其它角色名2</a>
+                        <a href="../<其它角色名英文路径>" class="character-link-small"><其它角色></a>
+                        <a href="../<其它角色名英文路径>" class="character-link-small"><其它角色></a>
+                        <!-- 更多角色 -->
                     </td>
                 </tr>
                 <tr>
@@ -88,7 +109,7 @@ hide:
         <!-- 快速描述 -->
         <div class="quick-description">
             <h3>简介</h3>
-            <p>请输入文本</p>
+            <p>请输入简介</p>
         </div>
         
         <!-- 特性指标 -->
@@ -129,24 +150,31 @@ hide:
         <div class="section-content">
             <h3>饮食偏好</h3>
             <ul>
-                <li><strong>最爱食物：</strong>xx</li>
-                <li><strong>常饮饮品：</strong>xx</li>
-                <li><strong>特殊习惯：</strong>xx</li>
+                <li><strong>最爱食物：</strong>请输入文本</li>
+                <li><strong>常饮饮品：</strong>请输入文本</li>
+                <li><strong>特殊习惯：</strong>请输入文本</li>
             </ul>
             
             <h3>行为模式</h3>
             <div class="behavior-patterns">
                 <div class="pattern-card">
-                    <div class="pattern-icon">emoji或图标1</div>
+                    <div class="pattern-icon">请输入emoji</div>
                     <div class="pattern-content">
-                        <h4>xx模式</h4>
+                        <h4>请输入模式</h4>
                         <p>请输入文本</p>
                     </div>
                 </div>
                 <div class="pattern-card">
-                    <div class="pattern-icon">emoji或图标2</div>
+                    <div class="pattern-icon">请输入emoji</div>
                     <div class="pattern-content">
-                        <h4>xx模式</h4>
+                        <h4>请输入模式</h4>
+                        <p>请输入文本</p>
+                    </div>
+                </div>
+                <div class="pattern-card">
+                    <div class="pattern-icon">🎸</div>
+                    <div class="pattern-content">
+                        <h4>音乐</h4>
                         <p>请输入文本</p>
                     </div>
                 </div>
@@ -158,18 +186,18 @@ hide:
     <section class="detail-section">
         <h2>背景故事</h2>
         <div class="section-content">
-            <p>角色名 最初被发现于？，请输入文本</p>
+            <p><角色名>最初被发现于...</p>
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2025年3月</div>
+                    <div class="timeline-date">2025年x月</div>
                     <div class="timeline-content">
                         <h4>初次发现</h4>
                         <p>请输入文本</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">时间</div>
+                    <div class="timeline-date">请输入时间</div>
                     <div class="timeline-content">
                         <h4>请输入标题</h4>
                         <p>请输入文本</p>
@@ -184,24 +212,24 @@ hide:
         <h2>角色关系</h2>
         <div class="section-content">
             <div class="relationship-grid">
-                <a href="../mutsumi_rabbit" class="relationship-card">
+                <a href="../<其它角色名英文路径>" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/其它角色1.png" alt="其它角色1">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<其它角色名英文路径>.png" alt="<其它角色>">
                     </div>
                     <div class="rel-info">
-                        <h4>其他角色1</h4>
-                        <p class="rel-type">关系</p>
+                        <h4>请输入其它角色名</h4>
+                        <p class="rel-type">角色间关系</p>
                         <p class="rel-desc">请输入文本</p>
                     </div>
                 </a>
                 
-                <a href="../anon_dog" class="relationship-card">
+                <a href="../<其它角色名英文路径>" class="relationship-card">
                     <div class="rel-avatar">
-                        <img src="https://cdn.jsdelivr.net/gh/Shuixin-xdu/Shuixin-xdu.github.io@main/docs/contents/pictorial_guide/其它角色2.png" alt="其它角色2">
+                        <img src="https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<其它角色名英文路径>.png" alt="<其它角色>">
                     </div>
                     <div class="rel-info">
-                        <h4>其它角色2</h4>
-                        <p class="rel-type">关系</p>
+                        <h4>请输入其它角色名</h4>
+                        <p class="rel-type">角色间关系</p>
                         <p class="rel-desc">请输入文本</p>
                     </div>
                 </a>
@@ -215,16 +243,57 @@ hide:
         <div class="section-content">
             <div class="anecdotes">
                 <div class="anecdote">
-                    <h4>请输入标题</h4>
+                    <h4><emoji> 请输入事件标题</h4>
                     <p>请输入文本</p>
                 </div>
                 <div class="anecdote">
-                    <h4>请输入标题</h4>
+                    <h4><emoji> 请输入事件标题</h4>
                     <p>请输入文本</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 设定集板块 -->
+    <section class="detail-section">
+        <h2>设定集</h2>
+        <div class="section-content">
+            <div class="settings-collection">
+                <!-- 轮播导航按钮 -->
+                <div class="settings-nav prev" onclick="changeSettingCard(-1)">
+                    <span>&lt;</span>
+                </div>
+                
+                <!-- 设定卡片容器 -->
+                <div class="settings-container">
+                    <!-- 设定卡片将在这里动态生成 -->
+                </div>
+                
+                <div class="settings-nav next" onclick="changeSettingCard(1)">
+                    <span>&gt;</span>
+                </div>
+                
+                <!-- 卡片指示器 -->
+                <div class="settings-indicator">
+                    <span class="current-card">1</span> / <span class="total-cards">3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 图片放大模态框 -->
+<div id="imageModal" class="image-modal">
+    <div class="modal-overlay" onclick="closeImageModal()"></div>
+    <div class="modal-content">
+        <button class="close-button" onclick="closeImageModal()">×</button>
+        <div class="modal-nav" onclick="changeImage(-1)">&lt;</div>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="放大图片">
+            <div class="modal-signature" id="modalSignature"></div>
+        </div>
+        <div class="modal-nav" onclick="changeImage(1)">&gt;</div>
+    </div>
 </div>
 
 <style>
@@ -244,9 +313,14 @@ hide:
 
 /* 图片区域 */
 .character-detail-image {
-    position: sticky;
     top: 20px;
     align-self: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-image-section {
+    top: 20px;
 }
 
 .main-image {
@@ -254,6 +328,12 @@ hide:
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.02);
 }
 
 .main-image img {
@@ -266,6 +346,7 @@ hide:
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .thumbnail {
@@ -291,6 +372,66 @@ hide:
     width: 100%;
     height: 80px;
     object-fit: cover;
+}
+
+/* 固定图集卡片 */
+.gallery-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--md-default-bg-color);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.gallery-nav {
+    width: 30px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(64, 158, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.gallery-nav:hover {
+    background: rgba(64, 158, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.gallery-image-container {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image-container:hover {
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+/* 署名样式 */
+.gallery-signature {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light);
 }
 
 /* 信息区域 */
@@ -739,6 +880,358 @@ hide:
     margin-right: 10px;
 }
 
+/* 关闭按钮样式 */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; /* 确保在模态框内容之上 */
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* 设定集样式 */
+.settings-collection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.settings-nav {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--md-primary-fg-color--light);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    user-select: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.settings-nav:hover {
+    background: var(--md-primary-fg-color);
+    transform: scale(1.1);
+}
+
+.settings-container {
+    width: 600px;
+    min-height: 300px;
+    position: relative;
+}
+
+.settings-card {
+    background: var(--md-default-bg-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 折叠状态样式 */
+.settings-card.collapsed {
+    padding: 25px;
+}
+
+.settings-content.collapsed {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.settings-image {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid rgba(100, 200, 255, 0.2);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.settings-image:hover {
+    transform: scale(1.02);
+    border-color: var(--md-primary-fg-color--light);
+}
+
+.settings-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.settings-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.setting-name {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--md-primary-fg-color);
+    margin: 0;
+}
+
+.setting-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95em;
+    color: var(--md-default-fg-color--light);
+}
+
+.author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    padding: 4px 10px;
+    background: rgba(64, 158, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.author-link:hover {
+    background: rgba(64, 158, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.platform-icon-img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.setting-intro {
+    font-size: 0.9em;
+    color: var(--md-default-fg-color);
+    line-height: 1.5;
+    margin: 5px 0 0 0;
+}
+
+/* 展开按钮 */
+.expand-button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 8px 24px;
+    background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color));
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(64, 158, 255, 0.3);
+}
+
+.expand-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(64, 158, 255, 0.4);
+}
+
+/* 展开状态样式 */
+.settings-card.expanded {
+    padding: 0;
+}
+
+.settings-content.expanded {
+    padding: 25px;
+}
+
+.expanded-top {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    margin-bottom: 20px;
+}
+
+.expanded-detail {
+    padding: 20px 0;
+}
+
+.detail-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: var(--md-default-fg-color);
+}
+
+.detail-content h4 {
+    color: var(--md-primary-fg-color);
+    margin: 20px 0 10px 0;
+    font-size: 1.1em;
+}
+
+.detail-content p {
+    margin: 10px 0;
+}
+
+.detail-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.detail-content li {
+    margin: 5px 0;
+}
+
+/* 收起按钮 */
+.collapse-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 24px;
+    background: var(--md-default-bg-color--light);
+    color: var(--md-default-fg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collapse-button:hover {
+    background: var(--md-default-fg-color--lightest);
+    transform: translateY(-2px);
+}
+
+/* 卡片指示器 */
+.settings-indicator {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: var(--md-default-fg-color--light);
+    background: var(--md-default-bg-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.current-card {
+    color: var(--md-primary-fg-color);
+    font-weight: bold;
+}
+
+/* 设定集图片点击效果 */
+.settings-image {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid rgba(100, 200, 255, 0.2);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer; /* 添加指针样式 */
+}
+
+.settings-image:hover {
+    transform: scale(1.02);
+    border-color: var(--md-primary-fg-color--light);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* 增强悬停效果 */
+}
+
+/* 点击态反馈 */
+.settings-image:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* 展开状态下的图片样式 */
+.expanded-top .settings-image {
+    width: 180px;
+    height: 180px;
+}
+
+@media (max-width: 768px) {
+    .settings-image {
+        width: 120px;
+        height: 120px;
+    }
+    .expanded-top .settings-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .settings-collection {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .settings-container {
+        width: 100%;
+    }
+    
+    .settings-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+    
+    .settings-nav.prev {
+        left: 10px;
+    }
+    
+    .settings-nav.next {
+        right: 10px;
+    }
+    
+    .settings-content.collapsed,
+    .expanded-top {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .settings-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .setting-author {
+        justify-content: center;
+    }
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     .character-title {
@@ -766,6 +1259,94 @@ hide:
     .next-character {
         text-align: left;
     }
+    
+    .gallery-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gallery-nav {
+        width: 180px;
+        height: 30px;
+        align-self: center;
+    }
+}
+
+/* 图片放大模态框样式 */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+}
+
+.modal-nav {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.modal-image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    padding: 0 20px;
+}
+
+.modal-image-container img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-signature {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
+    max-width: 100%;
 }
 </style>
 
@@ -785,6 +1366,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 更新主图
             const newImage = this.getAttribute('data-image');
+            const newSignature = this.getAttribute('data-signature');
             if (newImage && newImage !== mainImage.src) {
                 // 添加淡出效果
                 mainImage.style.opacity = '0.5';
@@ -812,5 +1394,397 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // 图集切换功能
+    const galleryImage = document.getElementById('galleryImage');
+    const gallerySignature = document.getElementById('gallerySignature');
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    
+    // 图集图片数组（这里使用示例图片，实际应用中可以动态加载）
+    const galleryImages = [
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_1.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_2.png", signature: "其它形象2(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_3.png", signature: "其它形象3(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_4.png", signature: "其它形象4(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_5.png", signature: "其它形象5(待署名)"}
+    ];
+    
+    let currentGalleryIndex = 0;
+    
+    function updateGalleryImage() {
+        galleryImage.style.opacity = '0.5'; // 淡出效果
+        galleryImage.onload = () => {
+            galleryImage.style.opacity = '1'; // 加载完成后再淡入
+        };
+        galleryImage.onerror = () => {
+            galleryImage.src = 'https://via.placeholder.com/300x300.png'; // 加载失败时的占位图
+            galleryImage.style.opacity = '1';
+        };
+        galleryImage.src = galleryImages[currentGalleryIndex].src; // 更新图片
+        gallerySignature.textContent = galleryImages[currentGalleryIndex].signature; // 更新署名
+    }
+    
+    galleryPrev.addEventListener('click', function() {
+        currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateGalleryImage();
+    });
+    
+    galleryNext.addEventListener('click', function() {
+        currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+        updateGalleryImage();
+    });
+});
+
+// 图片放大模态框功能
+let currentModalType = null;
+let currentModalIndex = 0;
+let modalImageSources = [];
+let modalSignatures = [];
+
+function openImageModal(type, element) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalSignature = document.getElementById('modalSignature');
+    const modalNavs = document.querySelectorAll('.modal-nav'); // 获取所有左右切换按钮
+    
+    if (type === 'main') {
+        // 主图模式：获取所有缩略图数据
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        modalImageSources = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-image'));
+        modalSignatures = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-signature'));
+        // 找到当前缩略图的索引
+        const currentSrc = document.getElementById('mainCharacterImage').src;
+        currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
+        if (currentModalIndex === -1) currentModalIndex = 0;
+        
+        // 显示左右切换按钮
+        modalNavs.forEach(nav => nav.style.display = 'flex');
+        
+    } else if (type === 'gallery') {
+        // 图集模式：使用图集数据
+        modalImageSources = galleryImages.map(img => img.src);
+        modalSignatures = galleryImages.map(img => img.signature);
+        // 找到当前图集图片的索引
+        const currentSrc = document.getElementById('galleryImage').src;
+        currentModalIndex = modalImageSources.findIndex(src => src === currentSrc);
+        if (currentModalIndex === -1) currentModalIndex = 0;
+        
+        // 显示左右切换按钮
+        modalNavs.forEach(nav => nav.style.display = 'flex');
+        
+    } else if (type === 'setting') {
+        // 设定集图片模式
+        const imgElement = element.querySelector('img') || element;
+        const settingName = element.closest('.settings-card').querySelector('.setting-name')?.textContent || '设定图';
+        
+        modalImageSources = [imgElement.src];
+        modalSignatures = [settingName];
+        currentModalIndex = 0;
+        
+        // 隐藏左右切换按钮
+        modalNavs.forEach(nav => nav.style.display = 'none');
+        
+        // 添加淡入动画
+        modalImage.style.opacity = '0';
+        setTimeout(() => {
+            modalImage.style.opacity = '1';
+            modalImage.style.transition = 'opacity 0.3s ease';
+        }, 10);
+    }
+    
+    currentModalType = type;
+    modalImage.src = modalImageSources[currentModalIndex];
+    modalSignature.textContent = modalSignatures[currentModalIndex];
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 防止背景滚动
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    const modalNavs = document.querySelectorAll('.modal-nav');
+    
+    // 重置所有按钮为显示状态
+    modalNavs.forEach(nav => nav.style.display = 'flex');
+    
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // 恢复背景滚动
+    currentModalType = null; // 重置当前模态框类型
+}
+
+function changeImage(direction) {
+    // 如果是设定集类型，不执行切换
+    if (currentModalType === 'setting') {
+        return;
+    }
+    
+    if (currentModalType === null) return;
+    
+    currentModalIndex += direction;
+    
+    // 循环切换
+    if (currentModalIndex >= modalImageSources.length) {
+        currentModalIndex = 0;
+    } else if (currentModalIndex < 0) {
+        currentModalIndex = modalImageSources.length - 1;
+    }
+    
+    const modalImage = document.getElementById('modalImage');
+    const modalSignature = document.getElementById('modalSignature');
+    modalImage.src = modalImageSources[currentModalIndex];
+    modalSignature.textContent = modalSignatures[currentModalIndex];
+}
+
+// 点击ESC键关闭模态框
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+    
+    // 如果是设定集类型，不响应左右箭头切换
+    if (currentModalType === 'setting') {
+        return;
+    }
+    
+    // 左右箭头切换图片（仅限非设定集类型）
+    if (event.key === 'ArrowLeft') {
+        changeImage(-1);
+        event.preventDefault(); // 防止滚动
+    } else if (event.key === 'ArrowRight') {
+        changeImage(1);
+        event.preventDefault(); // 防止滚动
+    }
+});
+
+// 图集数据（在全局作用域定义，供模态框使用）
+const galleryImages = [
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_1.png", signature: "其它形象1(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_2.png", signature: "其它形象2(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_3.png", signature: "其它形象3(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_4.png", signature: "其它形象4(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/others_5.png", signature: "其它形象5(待署名)"}
+];
+
+// 设定集数据
+const settingsData = 
+[
+    {
+        id: 1,
+        image: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/settings_1.png",
+        name: "设定名（例）",
+        author: "作者",
+        authorLink: "此处放入社媒链接",
+        platform: "bilibili",
+        intro: "一句话简介",
+        detail: 
+            `
+            <h4>角色背景</h4>
+            <p>请输入背景</p>
+            
+            <h4>日常行为</h4>
+            <ul>
+                <li>行为1</li>
+                <li>行为2</li>
+            </ul>
+            
+            <h4>特殊习惯</h4>
+            <p>请输入文本</p>
+
+            <h4>更多内容</h4>
+            <p>......</p>
+            `
+    },
+    {
+        id: 2,
+        image: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/<角色名英文路径>/settings_2.png",
+        name: "设定名（例）",
+        author: "作者名",
+        authorLink: "此处放入社媒链接",
+        platform: "bilibili",
+        intro: "一句话简介",
+        detail: 
+            `
+            <h4>习性</h4>
+            <p>请输入文本</p>
+            
+            <h4>捕食行为</h4>
+            <p>请输入文本</p>
+            
+            <h4>请输入标题</h4>
+            <p>请输入文本</p>
+
+            <h4>更多内容</h4>
+            <p>......</p>
+            `
+    },
+];
+
+// 平台图标映射 - 使用外部链接
+const platformIcons = {
+    bilibili: '<img src="https://img.icons8.com/ios-filled/16/000000/bilibili.png" class="platform-icon-img" alt="Bilibili">',
+    twitter: '<img src="https://img.icons8.com/ios-filled/16/000000/twitter.png" class="platform-icon-img" alt="Twitter">',
+    pixiv: '<img src="https://img.icons8.com/ios-filled/16/000000/picture.png" class="platform-icon-img" alt="Pixiv">'
+};
+
+let currentSettingIndex = 0;
+let settingsContainer = null;
+
+// 新增：跟踪每个卡片的展开状态
+let cardStates = {};
+
+// 初始化设定集
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化所有卡片的展开状态为false（折叠）
+    settingsData.forEach(setting => {
+        cardStates[setting.id] = false;
+    });
+    
+    renderSettingCard();
+});
+
+// 渲染当前设定卡片
+// 渲染当前设定卡片
+function renderSettingCard() {
+    const setting = settingsData[currentSettingIndex];
+    const isExpanded = cardStates[setting.id] || false;
+    
+    // 确保settingsContainer存在
+    if (!settingsContainer) {
+        settingsContainer = document.querySelector('.settings-container');
+        if (!settingsContainer) return;
+    }
+    
+    const cardHTML = `
+        <div class="settings-card ${isExpanded ? 'expanded' : 'collapsed'}" data-id="${setting.id}">
+            <div class="settings-content ${isExpanded ? 'expanded' : 'collapsed'}">
+                ${isExpanded ? `
+                    <div class="expanded-top">
+                        <div class="settings-image" onclick="openImageModal('setting', this)">
+                            <img src="${setting.image}" alt="${setting.name}" loading="lazy">
+                        </div>
+                        <div class="settings-info">
+                            <h3 class="setting-name">${setting.name}</h3>
+                            <div class="setting-author">
+                                作者：
+                                <a href="${setting.authorLink}" target="_blank" class="author-link">
+                                    ${platformIcons[setting.platform] || platformIcons.bilibili}
+                                    ${setting.author}
+                                </a>
+                            </div>
+                            <p class="setting-intro">${setting.intro}</p>
+                        </div>
+                    </div>
+                    <div class="expanded-detail">
+                        <div class="detail-content">${setting.detail}</div>
+                        <button class="collapse-button" onclick="toggleCard(${setting.id})">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            收起详情
+                        </button>
+                    </div>
+                ` : `
+                    <div class="settings-image" onclick="openImageModal('setting', this)">
+                        <img src="${setting.image}" alt="${setting.name}" loading="lazy">
+                    </div>
+                    <div class="settings-info">
+                        <h3 class="setting-name">${setting.name}</h3>
+                        <div class="setting-author">
+                            作者：
+                            <a href="${setting.authorLink}" target="_blank" class="author-link">
+                                ${platformIcons[setting.platform] || platformIcons.bilibili}
+                                ${setting.author}
+                            </a>
+                        </div>
+                        <p class="setting-intro">${setting.intro}</p>
+                    </div>
+                    <button class="expand-button" onclick="toggleCard(${setting.id})">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        展开详情
+                    </button>
+                `}
+            </div>
+        </div>
+    `;
+    
+    settingsContainer.innerHTML = cardHTML;
+    updateIndicator();
+}
+
+// 切换卡片展开/收起状态 - 修复版
+function toggleCard(cardId) {
+    // 如果没有传入cardId，使用当前卡片的id
+    if (!cardId) {
+        cardId = settingsData[currentSettingIndex].id;
+    }
+    
+    // 切换该卡片的展开状态
+    cardStates[cardId] = !cardStates[cardId];
+    
+    // 重新渲染当前卡片
+    renderSettingCard();
+}
+
+// 切换设定卡片 - 修复版
+function changeSettingCard(direction) {
+    currentSettingIndex = (currentSettingIndex + direction + settingsData.length) % settingsData.length;
+    renderSettingCard();
+}
+
+// 更新指示器
+function updateIndicator() {
+    const currentSpan = document.querySelector('.current-card');
+    const totalSpan = document.querySelector('.total-cards');
+    
+    if (currentSpan) currentSpan.textContent = currentSettingIndex + 1;
+    if (totalSpan) totalSpan.textContent = settingsData.length;
+}
+
+// 添加图片加载错误处理
+document.addEventListener('DOMContentLoaded', function() {
+    // 监听图片加载错误
+    document.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG' && e.target.parentElement.classList.contains('settings-image')) {
+            e.target.src = 'https://via.placeholder.com/300x300/4a90e2/ffffff?text=设定图';
+            console.log('设定图片加载失败，已替换为占位图');
+        }
+    }, true);
+});
+
+// 添加图片加载状态处理
+document.addEventListener('DOMContentLoaded', function() {
+    // 监听设定集图片的点击事件（事件委托）
+    document.addEventListener('click', function(e) {
+        // 如果点击的是设定集图片
+        if (e.target.closest('.settings-image')) {
+            const imgContainer = e.target.closest('.settings-image');
+            const img = imgContainer.querySelector('img');
+            
+            // 添加点击反馈
+            imgContainer.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                imgContainer.style.transform = 'scale(1)';
+            }, 150);
+            
+            // 检查图片是否已加载
+            if (!img.complete || img.naturalHeight === 0) {
+                console.log('设定图片正在加载...');
+                // 可以在这里添加加载指示器
+            }
+        }
+    });
+    
+    // 预加载设定集图片，提高用户体验
+    function preloadSettingsImages() {
+        settingsData.forEach(setting => {
+            const img = new Image();
+            img.src = setting.image;
+        });
+    }
+    
+    // 页面加载后预加载图片
+    setTimeout(preloadSettingsImages, 1000);
 });
 </script>
