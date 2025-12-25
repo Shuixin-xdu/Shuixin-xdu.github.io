@@ -1,22 +1,29 @@
 /**
- * MkDocs 圣诞装饰 + 礼物弹窗整合版（完美图片展示版）
+ * MkDocs 圣诞装饰 + 礼物弹窗整合版（完美图片展示版 - 修复移动端）
  * 保存为: docs/js/christmas.js
  */
 
 (function() {
     'use strict';
     
-    // 图片路径配置 - 请替换为你的实际图片路径
+    // 图片路径配置
     const IMAGE_PATHS = {
-        gift: 'https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/decoration/2025-12-25-1.webp',      // 初始礼物图片
-        closed: 'https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/decoration/2025-12-25-2.webp',    // 关闭时的图片
-        opened: 'https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/decoration/2025-12-25-3.webp'     // 接收后的图片
+        gift: 'https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/decoration/2025-12-25-1.webp',
+        closed: 'https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/decoration/2025-12-25-2.webp',
+        opened: 'https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/decoration/2025-12-25-3.webp'
     };
     
-    // 全局变量：记录弹窗是否已经完成滑入动画
+    // 全局变量
     let hasSlidIn = false;
-    // 全局变量：记录弹窗是否已经被拖动过
     let hasBeenDragged = false;
+    let shakeInterval = null;
+    let shouldShake = true;
+    let isShaking = false;
+    
+    // 检测是否为移动设备
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
     
     // 等待页面完全加载
     if (document.readyState === 'loading') {
@@ -34,7 +41,7 @@
         // 2. 初始化原有的圣诞装饰特效
         initOriginalDecorations();
         
-        // 3. 创建右上角弹窗控制开关
+        // 3. 创建左上角弹窗控制开关
         createPopupControlSwitch();
         
         // 4. 根据用户设置决定是否显示弹窗
@@ -42,8 +49,9 @@
         
         // 默认显示弹窗（除非用户之前关闭了）
         if (isPopupEnabled !== 'false') {
-            // 延迟显示，让页面先加载
-            setTimeout(createGiftPopup, 1500);
+            // 移动设备延迟更久一些，确保页面完全加载
+            const delay = isMobileDevice() ? 2500 : 1500;
+            setTimeout(createGiftPopup, delay);
         }
         
         console.log('🎅 圣诞装饰加载完成！节日快乐！');
@@ -167,11 +175,11 @@
             }
             
             /* ========== 弹窗相关样式（完美图片展示版） ========== */
-            /* 弹窗控制开关样式 */
+            /* 弹窗控制开关样式 - 移动到左上角 */
             .christmas-control {
                 position: fixed;
                 top: 80px;
-                right: 20px;
+                left: 20px; /* 从right改为left */
                 z-index: 10002;
                 background: rgba(255, 255, 255, 0.95);
                 border-radius: 20px;
@@ -254,22 +262,27 @@
                 transition: opacity 2s ease;
                 display: flex;
                 flex-direction: column;
+                transform-origin: center center; /* 旋转中心设为弹窗中心 */
             }
             
-            /* 弹窗摇晃动画 - 明显的左右抖动，像小狗摇头 */
-            @keyframes dogShake {
-                0%, 100% { transform: translateX(0) rotate(0deg); }
-                15% { transform: translateX(-8px) rotate(-3deg); }
-                30% { transform: translateX(8px) rotate(3deg); }
-                45% { transform: translateX(-6px) rotate(-2deg); }
-                60% { transform: translateX(6px) rotate(2deg); }
-                75% { transform: translateX(-4px) rotate(-1deg); }
-                90% { transform: translateX(4px) rotate(1deg); }
+            /* 强力摇晃动画 - 逆时针/顺时针快速交替 */
+            @keyframes strongShake {
+                0%, 100% { transform: rotate(0deg); }
+                10% { transform: rotate(-8deg); } /* 逆时针 */
+                20% { transform: rotate(8deg); }  /* 顺时针 */
+                30% { transform: rotate(-6deg); } /* 逆时针 */
+                40% { transform: rotate(6deg); }  /* 顺时针 */
+                50% { transform: rotate(-4deg); } /* 逆时针 */
+                60% { transform: rotate(4deg); }  /* 顺时针 */
+                70% { transform: rotate(-2deg); } /* 逆时针 */
+                80% { transform: rotate(2deg); }  /* 顺时针 */
+                90% { transform: rotate(0deg); }  /* 回到中心 */
+                100% { transform: rotate(0deg); }
             }
             
             /* 摇晃动画应用类 */
-            .dog-shake {
-                animation: dogShake 1.2s infinite ease-in-out;
+            .shake-active {
+                animation: strongShake 0.8s ease-in-out;
             }
             
             /* 弹窗滑入动画 */
@@ -284,7 +297,7 @@
                 }
             }
             
-            /* 滑入动画完成后移除动画，防止拖动时再次触发 */
+            /* 滑入动画完成后移除动画 */
             .slide-animation-done {
                 animation: none !important;
                 left: 20px;
@@ -293,10 +306,10 @@
             /* 图片展示区 - 完全展示图片，不留白 */
             .popup-image-container {
                 width: 100%;
-                height: 220px; /* 专门的图片区域高度 */
+                height: 220px;
                 position: relative;
                 overflow: hidden;
-                background: linear-gradient(135deg, #ffe6e6, #ffcccc); /* 图片加载前的背景 */
+                background: linear-gradient(135deg, #ffe6e6, #ffcccc);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -305,12 +318,12 @@
             .gift-image {
                 width: 100%;
                 height: 100%;
-                object-fit: contain; /* 完整显示图片，不裁剪，居中 */
+                object-fit: contain;
                 display: block;
                 background: transparent;
             }
             
-            /* 文字标题区 - 悬浮在图片上方，但固定在顶部边缘 */
+            /* 文字标题区 */
             .popup-title-container {
                 position: absolute;
                 top: 0;
@@ -339,24 +352,24 @@
                 line-height: 1.3;
             }
             
-            /* 控制区域 - 在图片下方，完全分离 */
+            /* 控制区域 */
             .popup-controls {
                 background: linear-gradient(to bottom, #fff5f5, #ffe6e6);
-                padding: 15px; /* 减少内边距 */
+                padding: 15px;
                 display: flex;
                 flex-direction: column;
-                gap: 12px; /* 减少间距 */
+                gap: 12px;
                 border-top: 3px solid #ffcccc;
-                flex-shrink: 0; /* 防止被压缩 */
+                flex-shrink: 0;
             }
             
             .receive-btn {
                 background: linear-gradient(to bottom, #4CAF50, #2E7D32);
                 color: white;
                 border: none;
-                padding: 12px 24px; /* 减小按钮尺寸 */
-                border-radius: 25px; /* 减小圆角 */
-                font-size: 16px; /* 减小字体 */
+                padding: 12px 24px;
+                border-radius: 25px;
+                font-size: 16px;
                 font-weight: bold;
                 cursor: pointer;
                 transition: all 0.3s ease;
@@ -382,7 +395,7 @@
                 box-shadow: none;
             }
             
-            /* 关闭按钮 - 在图片区域右上角，但不遮挡图片内容 */
+            /* 关闭按钮 */
             .popup-close-btn {
                 position: absolute;
                 top: 15px;
@@ -401,7 +414,7 @@
                 color: #d00;
                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
                 transition: all 0.3s ease;
-                z-index: 10; /* 高于文字标题 */
+                z-index: 10;
             }
             
             .popup-close-btn:hover {
@@ -446,15 +459,36 @@
                 }
             }
             
-            /* 响应式调整 */
+            /* ========== 移动端专门样式 ========== */
             @media (max-width: 768px) {
                 .gift-popup {
-                    width: 300px;
-                    left: -300px;
+                    width: 280px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -300px;
+                    animation: slideInFromBottom 1.5s ease-out forwards;
+                }
+                
+                @keyframes slideInFromBottom {
+                    0% {
+                        bottom: -300px;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                    100% {
+                        bottom: 80px;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                }
+                
+                .slide-animation-done {
+                    animation: none !important;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(0);
+                    bottom: 80px;
                 }
                 
                 .popup-image-container {
-                    height: 200px;
+                    height: 180px;
                 }
                 
                 .popup-title-container {
@@ -469,6 +503,20 @@
                     padding: 10px 20px;
                     font-size: 15px;
                 }
+                
+                .popup-close-btn {
+                    width: 32px;
+                    height: 32px;
+                    font-size: 18px;
+                }
+                
+                /* 移动端控制开关调整 */
+                .christmas-control {
+                    top: 60px;
+                    left: 10px;
+                    padding: 6px 10px;
+                    font-size: 11px;
+                }
             }
         `;
         document.head.appendChild(style);
@@ -476,23 +524,13 @@
     
     // ==================== 原有的圣诞装饰功能 ====================
     function initOriginalDecorations() {
-        // 飘雪效果
         initSnowflakes();
-        
-        // 圣诞帽装饰
         initChristmasHats();
-        
-        // 闪烁彩灯
         initTwinklingLights();
-        
-        // 点击特效
         initClickEffects();
-        
-        // 节日消息
         addChristmasMessage();
     }
     
-    // 1. 飘雪效果
     function initSnowflakes() {
         const snowflakes = ['❄', '❅', '❆', '•'];
         const snowflakeCount = 50;
@@ -509,7 +547,6 @@
             snowflake.style.fontSize = (Math.random() * 20 + 10) + 'px';
             snowflake.style.opacity = Math.random() * 0.6 + 0.4;
             
-            // 添加自定义下落动画
             const fallAnimation = document.createElement('style');
             fallAnimation.textContent = `
                 @keyframes fall-${index} {
@@ -530,9 +567,7 @@
         }
     }
     
-    // 2. 圣诞帽装饰
     function initChristmasHats() {
-        // 在页面四个角落添加圣诞帽
         const positions = [
             { top: '10px', left: '10px' },
             { top: '10px', right: '10px' },
@@ -544,24 +579,19 @@
             const hat = document.createElement('div');
             hat.className = 'christmas-hat';
             
-            // 设置位置
             Object.keys(pos).forEach(key => {
                 hat.style[key] = pos[key];
             });
             
-            // 添加白色小球
             const ball = document.createElement('div');
             ball.className = 'hat-ball';
             hat.appendChild(ball);
             
-            // 随机旋转
             hat.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
-            
             document.body.appendChild(hat);
         });
     }
     
-    // 3. 闪烁彩灯
     function initTwinklingLights() {
         const colors = ['#ff0000', '#00ff00', '#ffff00', '#ff00ff', '#00ffff'];
         const lightCount = 30;
@@ -572,31 +602,24 @@
                 light.className = 'christmas-light';
                 light.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 
-                // 随机位置（主要分布在页面边缘）
                 if (Math.random() > 0.5) {
-                    // 顶部或底部
                     light.style.top = Math.random() > 0.5 ? '0' : 'calc(100vh - 12px)';
                     light.style.left = Math.random() * 100 + 'vw';
                 } else {
-                    // 左侧或右侧
                     light.style.left = Math.random() > 0.5 ? '0' : 'calc(100vw - 12px)';
                     light.style.top = Math.random() * 100 + 'vh';
                 }
                 
-                // 随机闪烁延迟
                 light.style.animationDelay = Math.random() * 2 + 's';
-                
                 document.body.appendChild(light);
             }, i * 100);
         }
     }
     
-    // 4. 点击特效
     function initClickEffects() {
         const effects = ['🎄', '🎁', '🌟', '❄', '🔔', '⭐', '🦌'];
         
         document.addEventListener('click', function(e) {
-            // 避免在输入框、按钮等元素上触发
             if (e.target.tagName === 'INPUT' || 
                 e.target.tagName === 'TEXTAREA' || 
                 e.target.tagName === 'SELECT' ||
@@ -613,7 +636,6 @@
             
             document.body.appendChild(effect);
             
-            // 1.5秒后移除元素
             setTimeout(() => {
                 if (effect.parentNode) {
                     effect.parentNode.removeChild(effect);
@@ -622,7 +644,6 @@
         });
     }
     
-    // 5. 节日消息（原有的右下角消息）
     function addChristmasMessage() {
         const messages = [
             '圣诞快乐！🎅',
@@ -636,7 +657,6 @@
         messageDiv.textContent = messages[Math.floor(Math.random() * messages.length)];
         messageDiv.title = '点击关闭';
         
-        // 点击关闭
         messageDiv.addEventListener('click', function() {
             this.style.animation = 'floatUp 1s ease-out forwards';
             setTimeout(() => {
@@ -646,7 +666,6 @@
             }, 1000);
         });
         
-        // 10秒后自动隐藏
         setTimeout(() => {
             if (messageDiv.parentNode) {
                 messageDiv.style.opacity = '0.5';
@@ -667,7 +686,6 @@
     }
     
     // ==================== 弹窗相关功能 ====================
-    // 1. 创建右上角控制开关
     function createPopupControlSwitch() {
         const controlDiv = document.createElement('div');
         controlDiv.className = 'christmas-control';
@@ -687,31 +705,30 @@
         const slider = document.createElement('span');
         slider.className = 'switch-slider';
         
-        // 切换弹窗显示/隐藏
         checkbox.addEventListener('change', function() {
             localStorage.setItem('christmasPopupEnabled', this.checked);
             
             const popup = document.querySelector('.gift-popup');
             
             if (this.checked) {
-                // 如果弹窗不存在，创建新的
                 if (!popup) {
-                    hasSlidIn = false; // 重置滑入状态
-                    hasBeenDragged = false; // 重置拖动状态
+                    hasSlidIn = false;
+                    hasBeenDragged = false;
+                    shouldShake = true;
                     createGiftPopup();
                 } else {
-                    // 如果存在但隐藏了，重新显示
                     popup.style.opacity = '1';
                     popup.style.visibility = 'visible';
                     popup.classList.remove('fade-out');
-                    // 重新开始摇晃动画
-                    if (!popup.classList.contains('dog-shake')) {
-                        popup.classList.add('dog-shake');
+                    shouldShake = true;
+                    if (!isShaking) {
+                        startShaking(popup);
                     }
                 }
             } else {
-                // 关闭弹窗
                 if (popup) {
+                    shouldShake = false;
+                    stopShaking();
                     popup.classList.add('fade-out');
                     setTimeout(() => {
                         if (popup.parentNode) {
@@ -730,29 +747,25 @@
         document.body.appendChild(controlDiv);
     }
     
-    // 2. 创建礼物弹窗（完美图片展示版）
     function createGiftPopup() {
-        // 如果弹窗已存在，先移除
         const existingPopup = document.querySelector('.gift-popup');
         if (existingPopup) {
             existingPopup.parentNode.removeChild(existingPopup);
         }
         
-        // 创建弹窗容器
+        stopShaking();
+        
         const popup = document.createElement('div');
         popup.className = 'gift-popup popup-draggable';
         
-        // 创建图片展示区（完全展示图片，不留白）
         const imageContainer = document.createElement('div');
         imageContainer.className = 'popup-image-container';
         
-        // 创建图片
         const image = document.createElement('img');
         image.className = 'gift-image';
         image.src = IMAGE_PATHS.gift;
         image.alt = '圣诞礼物';
         image.onerror = function() {
-            // 如果图片加载失败，使用替代方案
             this.style.display = 'none';
             const fallback = document.createElement('div');
             fallback.style.width = '100%';
@@ -767,7 +780,6 @@
             this.parentNode.insertBefore(fallback, this);
         };
         
-        // 创建文字标题区（悬浮在图片上方顶部）
         const titleContainer = document.createElement('div');
         titleContainer.className = 'popup-title-container';
         
@@ -775,21 +787,17 @@
         text.className = 'gift-text';
         text.textContent = '您的圣诞礼物汪';
         
-        // 创建关闭按钮（在图片区域右上角）
         const closeBtn = document.createElement('button');
         closeBtn.className = 'popup-close-btn';
         closeBtn.innerHTML = '×';
         
-        // 创建控制区域（在图片下方，完全分离）
         const controls = document.createElement('div');
         controls.className = 'popup-controls';
         
-        // 创建接收按钮
         const receiveBtn = document.createElement('button');
         receiveBtn.className = 'receive-btn';
         receiveBtn.textContent = '接收礼物';
         
-        // 组装弹窗
         imageContainer.appendChild(image);
         titleContainer.appendChild(text);
         imageContainer.appendChild(titleContainer);
@@ -801,47 +809,60 @@
         
         document.body.appendChild(popup);
         
-        // 滑入动画逻辑：只有第一次出现时才执行滑入动画
+        // 修复移动端bug：确保弹窗在DOM中稳定后再添加事件监听
+        setTimeout(() => {
+            if (popup.parentNode) {
+                setupPopupEvents(popup, image, text, titleContainer, closeBtn, receiveBtn);
+            }
+        }, 100);
+        
         if (!hasSlidIn) {
-            // 添加滑入动画
-            popup.style.animation = 'slideInFromLeft 1.5s ease-out forwards';
+            popup.style.animation = isMobileDevice() ? 
+                'slideInFromBottom 1.5s ease-out forwards' : 
+                'slideInFromLeft 1.5s ease-out forwards';
             
-            // 动画结束后，移除动画属性，固定位置，并开始摇晃动画
             setTimeout(() => {
-                popup.classList.add('slide-animation-done');
-                hasSlidIn = true;
-                
-                // 开始小狗摇晃动画
-                popup.classList.add('dog-shake');
+                if (popup.parentNode) {
+                    popup.classList.add('slide-animation-done');
+                    hasSlidIn = true;
+                    
+                    if (shouldShake) {
+                        startShaking(popup);
+                    }
+                }
             }, 1500);
         } else {
-            // 如果已经滑入过，直接设置位置，不执行动画
             popup.classList.add('slide-animation-done');
             
-            // 开始小狗摇晃动画
-            popup.classList.add('dog-shake');
+            if (isMobileDevice()) {
+                popup.style.left = '50%';
+                popup.style.transform = 'translateX(-50%)';
+                popup.style.bottom = '80px';
+            }
+            
+            if (shouldShake) {
+                startShaking(popup);
+            }
         }
         
-        // 添加拖动功能（拖动整个弹窗，包括图片区域）
         makeDraggable(popup, popup);
-        
-        // 添加事件监听器
+    }
+    
+    function setupPopupEvents(popup, image, text, titleContainer, closeBtn, receiveBtn) {
         let isReceived = false;
         
-        // 关闭按钮点击事件
+        // 修复移动端：阻止触摸事件的默认行为，防止意外关闭
         closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
             
             if (!isReceived) {
-                // 未接收时：切换图片并淡出
+                stopShaking();
+                shouldShake = false;
+                
                 image.src = IMAGE_PATHS.closed;
-                
-                // 更新文字
-                text.textContent = '把礼物扔出去';
+                text.textContent = '把这盒东西扔出去！';
                 titleContainer.style.background = 'linear-gradient(to bottom, rgba(100, 100, 100, 0.85), rgba(70, 70, 70, 0.7))';
-                
-                // 移除摇晃动画
-                popup.classList.remove('dog-shake');
                 
                 popup.classList.add('fade-out');
                 
@@ -851,93 +872,175 @@
                     }
                 }, 2000);
             } else {
-                // 接收后：直接移除
+                stopShaking();
+                shouldShake = false;
                 if (popup.parentNode) {
                     popup.parentNode.removeChild(popup);
                 }
             }
         });
         
-        // 接收按钮点击事件
-        receiveBtn.addEventListener('click', function() {
+        // 修复移动端：阻止触摸事件的默认行为
+        receiveBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
             if (!isReceived) {
                 isReceived = true;
                 
-                // 切换图片和文字
+                stopShaking();
+                shouldShake = false;
+                
                 image.src = IMAGE_PATHS.opened;
                 text.textContent = 'Anon犬想抱抱你';
                 
-                // 更新接收按钮
                 receiveBtn.textContent = '已接收 ✓';
                 receiveBtn.disabled = true;
-                
-                // 停止摇晃动画
-                popup.classList.remove('dog-shake');
             }
         });
+        
+        // 移动端专门处理：防止意外点击关闭
+        if (isMobileDevice()) {
+            let touchStartTime = 0;
+            let touchStartX = 0;
+            let touchStartY = 0;
+            
+            closeBtn.addEventListener('touchstart', function(e) {
+                touchStartTime = Date.now();
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            });
+            
+            closeBtn.addEventListener('touchend', function(e) {
+                const touchDuration = Date.now() - touchStartTime;
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const distance = Math.sqrt(
+                    Math.pow(touchEndX - touchStartX, 2) + 
+                    Math.pow(touchEndY - touchStartY, 2)
+                );
+                
+                // 只有长按或短距离点击才触发关闭，防止滑动误触
+                if (touchDuration > 100 && touchDuration < 1000 && distance < 10) {
+                    closeBtn.click();
+                }
+            });
+        }
     }
     
-    // 3. 使弹窗可拖动（支持图片区域拖动）
+    function startShaking(popup) {
+        if (!popup || !shouldShake) return;
+        
+        isShaking = true;
+        
+        if (shakeInterval) {
+            clearInterval(shakeInterval);
+        }
+        
+        function performShake() {
+            if (!popup || !shouldShake || !popup.parentNode) return;
+            
+            popup.classList.add('shake-active');
+            
+            setTimeout(() => {
+                popup.classList.remove('shake-active');
+                
+                if (shouldShake && popup.parentNode) {
+                    setTimeout(() => {
+                        if (shouldShake && popup.parentNode) {
+                            performShake();
+                        }
+                    }, 1000);
+                }
+            }, 800);
+        }
+        
+        performShake();
+        
+        shakeInterval = setInterval(() => {
+            if (!popup.parentNode || !shouldShake) {
+                stopShaking();
+            }
+        }, 1000);
+    }
+    
+    function stopShaking() {
+        isShaking = false;
+        if (shakeInterval) {
+            clearInterval(shakeInterval);
+            shakeInterval = null;
+        }
+        
+        const popup = document.querySelector('.gift-popup');
+        if (popup) {
+            popup.classList.remove('shake-active');
+        }
+    }
+    
     function makeDraggable(container, handle) {
         let isDragging = false;
-        let currentX;
-        let currentY;
-        let initialX;
-        let initialY;
-        let xOffset = 0;
-        let yOffset = 0;
+        let currentX, currentY, initialX, initialY, xOffset = 0, yOffset = 0;
+        let originalTransform = '';
         
-        handle.addEventListener('mousedown', dragStart);
-        handle.addEventListener('touchstart', dragStart, { passive: false });
+        // 移动端和桌面端使用不同的事件
+        const events = {
+            start: isMobileDevice() ? 'touchstart' : 'mousedown',
+            move: isMobileDevice() ? 'touchmove' : 'mousemove',
+            end: isMobileDevice() ? 'touchend' : 'mouseup'
+        };
+        
+        handle.addEventListener(events.start, dragStart);
         
         function dragStart(e) {
-            // 防止点击按钮时触发拖动（只在非按钮区域触发）
             if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
                 return;
             }
             
-            if (e.type === 'touchstart') {
-                initialX = e.touches[0].clientX - xOffset;
-                initialY = e.touches[0].clientY - yOffset;
-            } else {
-                initialX = e.clientX - xOffset;
-                initialY = e.clientY - yOffset;
-            }
+            const clientX = isMobileDevice() ? e.touches[0].clientX : e.clientX;
+            const clientY = isMobileDevice() ? e.touches[0].clientY : e.clientY;
+            
+            initialX = clientX - xOffset;
+            initialY = clientY - yOffset;
             
             if (e.target === handle || handle.contains(e.target)) {
                 isDragging = true;
                 container.classList.add('dragging');
                 
-                // 标记为已被拖动
                 hasBeenDragged = true;
+                originalTransform = container.style.transform;
                 
-                // 停止摇晃动画，拖动时暂停
-                container.classList.remove('dog-shake');
+                document.addEventListener(events.move, drag);
+                document.addEventListener(events.end, dragEnd);
                 
-                document.addEventListener('mousemove', drag);
-                document.addEventListener('touchmove', drag, { passive: false });
-                document.addEventListener('mouseup', dragEnd);
-                document.addEventListener('touchend', dragEnd);
+                // 防止移动端页面滚动
+                if (isMobileDevice()) {
+                    e.preventDefault();
+                }
             }
         }
         
         function drag(e) {
             if (isDragging) {
-                e.preventDefault();
-                
-                if (e.type === 'touchmove') {
-                    currentX = e.touches[0].clientX - initialX;
-                    currentY = e.touches[0].clientY - initialY;
-                } else {
-                    currentX = e.clientX - initialX;
-                    currentY = e.clientY - initialY;
+                if (isMobileDevice()) {
+                    e.preventDefault();
                 }
+                
+                const clientX = isMobileDevice() ? e.touches[0].clientX : e.clientX;
+                const clientY = isMobileDevice() ? e.touches[0].clientY : e.clientY;
+                
+                currentX = clientX - initialX;
+                currentY = clientY - initialY;
                 
                 xOffset = currentX;
                 yOffset = currentY;
                 
-                // 使用transform进行拖动，不影响原有的left定位
-                container.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                // 移动端使用不同的transform计算方式
+                if (isMobileDevice()) {
+                    const rect = container.getBoundingClientRect();
+                    container.style.left = `${rect.left + currentX}px`;
+                    container.style.transform = `translateX(-50%) translateY(${currentY}px)`;
+                } else {
+                    container.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                }
             }
         }
         
@@ -945,17 +1048,14 @@
             isDragging = false;
             container.classList.remove('dragging');
             
-            // 拖动结束后，如果还没有接收礼物，重新开始摇晃动画
-            const receiveBtn = container.querySelector('.receive-btn');
-            if (receiveBtn && !receiveBtn.disabled) {
-                container.classList.add('dog-shake');
-            }
+            document.removeEventListener(events.move, drag);
+            document.removeEventListener(events.end, dragEnd);
             
-            // 移除事件监听器
-            document.removeEventListener('mousemove', drag);
-            document.removeEventListener('touchmove', drag);
-            document.removeEventListener('mouseup', dragEnd);
-            document.removeEventListener('touchend', dragEnd);
+            // 拖动结束后恢复摇晃（如果还没有接收）
+            const receiveBtn = container.querySelector('.receive-btn');
+            if (receiveBtn && !receiveBtn.disabled && shouldShake) {
+                startShaking(container);
+            }
         }
     }
 })();
