@@ -435,6 +435,18 @@ hide:
     margin-top: 10px;
     font-size: 0.9em;
     color: var(--md-default-fg-color--light);
+    white-space: pre-line; /* 添加这行以支持换行 */
+}
+
+.gallery-signature a {
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.gallery-signature a:hover {
+    color: var(--md-accent-fg-color);
+    text-decoration: underline;
 }
 
 /* 信息区域 */
@@ -1350,6 +1362,18 @@ hide:
     font-size: 1.1em;
     color: white;
     max-width: 100%;
+    white-space: pre-line; /* 添加这行以支持换行 */
+}
+
+.modal-signature a {
+    color: #64c8ff; /* 浅蓝色，适合深色背景 */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.modal-signature a:hover {
+    color: #8cd5ff; /* 更亮的蓝色 */
+    text-decoration: underline;
 }
 </style>
 
@@ -1410,7 +1434,8 @@ document.addEventListener('DOMContentLoaded', function() {
         {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_2.png", signature: "其它形象2(待署名)"},
         {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_3.png", signature: "其它形象3(待署名)"},
         {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_4.png", signature: "其它形象4(待署名)"},
-        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_5.png", signature: "其它形象5(待署名)"}
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_5.png", signature: "其它形象5(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_6.png", signature: "生物防治-翠眼Soyo狸\n(署名:<a href='https://space.bilibili.com/310035417' target='_blank'>安德烈sama</a>)"}
     ];
     
     let currentGalleryIndex = 0;
@@ -1425,7 +1450,7 @@ document.addEventListener('DOMContentLoaded', function() {
             galleryImage.style.opacity = '1';
         };
         galleryImage.src = galleryImages[currentGalleryIndex].src; // 更新图片
-        gallerySignature.textContent = galleryImages[currentGalleryIndex].signature; // 更新署名
+        gallerySignature.innerHTML = galleryImages[currentGalleryIndex].signature; // 更新署名，使用innerHTML以解析链接
     }
     
     galleryPrev.addEventListener('click', function() {
@@ -1498,7 +1523,7 @@ function openImageModal(type, element) {
     
     currentModalType = type;
     modalImage.src = modalImageSources[currentModalIndex];
-    modalSignature.textContent = modalSignatures[currentModalIndex];
+    modalSignature.innerHTML = modalSignatures[currentModalIndex]; // 使用innerHTML以解析链接
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden'; // 防止背景滚动
 }
@@ -1535,7 +1560,7 @@ function changeImage(direction) {
     const modalImage = document.getElementById('modalImage');
     const modalSignature = document.getElementById('modalSignature');
     modalImage.src = modalImageSources[currentModalIndex];
-    modalSignature.textContent = modalSignatures[currentModalIndex];
+    modalSignature.innerHTML = modalSignatures[currentModalIndex]; // 使用innerHTML以解析链接
 }
 
 // 点击ESC键关闭模态框
@@ -1565,7 +1590,8 @@ const galleryImages = [
         {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_2.png", signature: "其它形象2(待署名)"},
         {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_3.png", signature: "其它形象3(待署名)"},
         {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_4.png", signature: "其它形象4(待署名)"},
-        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_5.png", signature: "其它形象5(待署名)"}
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_5.png", signature: "其它形象5(待署名)"},
+        {src: "https://aidoll-1392936919.cos.ap-guangzhou.myqcloud.com/images/characters/soyo_fox/others_6.png", signature: "生物防治-翠眼Soyo狸\n(署名:<a href='https://space.bilibili.com/310035417' target='_blank'>安德烈sama</a>)"}
 ];
 
 // 设定集数据
